@@ -12,3 +12,9 @@
 :root #hero10-root h1 + p {
   font-weight: 400;
 }
+
+/* Section, card and dialog titles share the hero's font; size and color inherit. */
+:root:root #root :is(h2, h3) {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+}
