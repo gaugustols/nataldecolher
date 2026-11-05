@@ -8,6 +8,8 @@ A hero atual usa `ProductMockup` de `hero/landing.tsx`: captura real da receita 
 
 Na oferta do Plano completo, `hero/offer-mockup.mjs` fornece a mesma árvore de apresentação para o HTML e o bundle React: tablet maior com a captura real `offer-tablet-screen.webp` e três celulares com telas de apresentação dos bônus. `offer-devices.css` mantém os celulares lado a lado também no mobile. Preços, lista de benefícios e checkout são preservados; o modal do plano básico mantém a apresentação anterior. As telas dos bônus exibem títulos e descrições de apresentação, sem simular conteúdo ainda não fornecido.
 
+Os preços e checkouts atuais ficam em `offers`, no script de atualização: completo R$ 19,90, básico R$ 6,99 e oferta do completo no modal R$ 9,99. O modal calcula automaticamente a diferença de R$ 3,00 para o básico. O script mantém os valores do HTML inicial iguais aos do React.
+
 O restante deste documento registra a integração original; a apresentação com capa e páginas em leque da hero foi substituída pelo mockup do aplicativo.
 
 Integração do componente fornecido, mantendo os parâmetros de `fanSlots`, `fanContainer`, `fanCard`, `Reveal` e `ImageFan`. A headline usa a pilha serifada padrão do Tailwind, peso 400 e tamanhos 30/36/48 px. O esquema de cores foi adaptado para a paleta real do site: `#fffaf3`, `#4b2b24`, `#a52f55`, `#75605b`.

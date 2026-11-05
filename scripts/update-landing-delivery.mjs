@@ -30,6 +30,31 @@ for (const [before, after] of replacements) {
   bundle = bundle.replaceAll(before, after)
   html = html.replaceAll(before, after)
 }
+// Current checkout offers supplied by the product owner.
+const offers = {
+  complete: { price: 19.90, checkout: 'https://pay.cakto.com.br/343dcvj_1286047' },
+  basic: { price: 6.99, checkout: 'https://pay.cakto.com.br/oar8h9a' },
+  upgrade: { price: 9.99, checkout: 'https://pay.cakto.com.br/qfmb2md' },
+}
+const pricePatterns = {
+  complete: /(complete:\{name:`Plano completo`,price:)[\d.]+(,originalPrice:[\d.]+,checkout:`)[^`]+(`\})/,
+  basic: /(basic:\{name:`Plano básico`,price:)[\d.]+(,checkout:`)[^`]+(`,description:)/,
+  upgrade: /(upgrade:\{price:)[\d.]+(,checkout:`)[^`]+(`\})/,
+}
+for (const [key, offer] of Object.entries(offers)) {
+  if (!pricePatterns[key].test(bundle)) throw new Error('Offer not found: ' + key)
+  bundle = bundle.replace(pricePatterns[key], (_, prefix, middle, suffix) => prefix + offer.price + middle + offer.checkout + suffix)
+}
+const brl = value => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value)
+const htmlOffers = [
+  [/(<div class="offer-price">[\s\S]*?<strong>)[^<]+(<\/strong>)/, (_, prefix, suffix) => prefix + brl(offers.complete.price) + suffix],
+  [/(<strong class="basic-price">)[^<]+(<\/strong>)/, (_, prefix, suffix) => prefix + brl(offers.basic.price) + suffix],
+  [/(<a class="btn" href=")[^"]+("[^>]*>QUERO O PLANO COMPLETO)/, (_, prefix, suffix) => prefix + offers.complete.checkout + suffix],
+]
+for (const [pattern, replace] of htmlOffers) {
+  if (!pattern.test(html)) throw new Error('Static offer markup not found')
+  html = html.replace(pattern, replace)
+}
 // Shared device presentation. Change only the bundle component, preserving the
 // plan's features, prices, checkout and surrounding layout.
 const previousMockup = bundle.indexOf('function OfferDeviceMockup(){')
