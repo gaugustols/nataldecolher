@@ -1,0 +1,38 @@
+/* Give the learning steps a readable, consistently aligned column on phones. */
+@media (width <= 600px) {
+  :root #root .timeline {
+    --mobile-step-gap: 26px;
+    gap: var(--mobile-step-gap);
+  }
+
+  :root #root .timeline::before {
+    display: none;
+  }
+
+  :root #root .timeline li {
+    justify-content: flex-start;
+    min-height: 0;
+    padding-left: 50px;
+  }
+
+  :root #root .timeline li > span {
+    top: 0;
+    left: 0;
+  }
+
+  :root #root .timeline li > div {
+    width: 100%;
+    min-width: 0;
+    text-align: left;
+  }
+
+  :root #root .timeline li:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    bottom: calc(-1 * var(--mobile-step-gap));
+    left: 17px;
+    width: 1px;
+    background: var(--elegant-gold);
+  }
+}
