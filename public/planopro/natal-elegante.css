@@ -86,6 +86,9 @@
 .material-row small { color: var(--muted); }
 .toast { box-shadow: 0 8px 20px #173f3529; }
 dialog::backdrop { background: #102e26e0; }
+.recipe-source { margin-top: 14px; }
+.book-notes { grid-column: 1 / -1; }
+.book-notes .text-link { margin-top: 16px; }
 
 /* Allow the wider system font to wrap without pushing mobile controls aside. */
 .start-banner > div,
