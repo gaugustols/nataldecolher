@@ -6,7 +6,7 @@ A hero atual usa `ProductMockup` de `hero/landing.tsx`: captura real da receita 
 
 `node scripts/update-landing-delivery.mjs` mantém as menções ao acesso pelo web app iguais no HTML e no bundle recuperado, incluindo oferta e FAQ. O script atualiza o nome do bundle por hash e preserva os comportamentos de galeria, modal e compra. Execute antes de `pnpm build:hero` quando houver alterações na copy de entrega.
 
-O mesmo script troca a imagem do livro no componente da oferta por `hero-webapp-screen.webp` dentro da moldura `.bundle-phone-frame`. O slot conserva as dimensões existentes; bônus, preços e demais elementos da oferta permanecem no lugar.
+Na oferta do Plano completo, `hero/offer-mockup.mjs` fornece a mesma árvore de apresentação para o HTML e o bundle React: tablet maior com a captura real `offer-tablet-screen.webp` e três celulares com telas de apresentação dos bônus. `offer-devices.css` mantém os celulares lado a lado também no mobile. Preços, lista de benefícios e checkout são preservados; o modal do plano básico mantém a apresentação anterior. As telas dos bônus exibem títulos e descrições de apresentação, sem simular conteúdo ainda não fornecido.
 
 O restante deste documento registra a integração original; a apresentação com capa e páginas em leque da hero foi substituída pelo mockup do aplicativo.
 

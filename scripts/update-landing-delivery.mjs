@@ -1,16 +1,17 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { createHash } from 'node:crypto'
+import { mockupHtml, mockupReact } from '../hero/offer-mockup.mjs'
 
 // Keep server markup and the recovered React bundle's copy in agreement.
 // No DOM replacements: the existing gallery, checkout and FAQ retain their state.
 const root = path.resolve('public/sobremesas-de-travessa')
 const htmlPath = path.join(root, 'index.html')
-let html = await fs.readFile(htmlPath, 'utf8')
+let html = (await fs.readFile(htmlPath, 'utf8')).replace(/\r\n/g, '\n')
 const script = html.match(/src="\/sobremesas-de-travessa\/assets\/(index-[\w-]+\.js)"/)
 if (!script) throw new Error('Recovered application entry not found')
 const bundlePath = path.join(root, 'assets', script[1])
-let bundle = await fs.readFile(bundlePath, 'utf8')
+let bundle = (await fs.readFile(bundlePath, 'utf8')).replace(/\r\n/g, '\n')
 const replacements = [
   ['Receba por e-mail e consulte no celular, tablet ou impresso.', 'Receba o acesso por e-mail e consulte as receitas no web app pelo celular.'],
   ['PDF para consultar no celular ou imprimir', 'Receitas no web app para consultar pelo celular'],
@@ -29,15 +30,31 @@ for (const [before, after] of replacements) {
   bundle = bundle.replaceAll(before, after)
   html = html.replaceAll(before, after)
 }
-// Replace only the book slot in the complete-plan bundle; bonuses stay intact.
-const oldSlot = '(0,D.jsx)(Je,{small:!0})'
-const phoneImage = '/sobremesas-de-travessa/assets/hero-webapp-screen.webp'
-const phoneAlt = 'Web app no celular: receita de Bombom de uva na travessa'
-const phoneSlot = '(0,D.jsx)(`div`,{className:`bundle-phone`,children:(0,D.jsx)(`div`,{className:`bundle-phone-frame`,children:(0,D.jsx)(`img`,{src:`' + phoneImage + '`,width:375,height:844,alt:`' + phoneAlt + '`,loading:`lazy`,decoding:`async`})})})'
-if (bundle.includes(oldSlot)) bundle = bundle.replaceAll(oldSlot, phoneSlot)
-else if (!bundle.includes(phoneSlot)) throw new Error('Complete-plan image slot not found')
-html = html.replace(/<div class="fan fan-small"[^>]*>[\s\S]*?<\/div>/g,
-  `<div class="bundle-phone"><div class="bundle-phone-frame"><img src="${phoneImage}" width="375" height="844" alt="${phoneAlt}" loading="lazy" decoding="async"/></div></div>`)
+// Shared device presentation. Change only the bundle component, preserving the
+// plan's features, prices, checkout and surrounding layout.
+const previousMockup = bundle.indexOf('function OfferDeviceMockup(){')
+const componentEnd = bundle.indexOf('function Xe(')
+if (componentEnd < 0) throw new Error('Offer component insertion point not found')
+const componentStart = previousMockup < 0 ? componentEnd : previousMockup
+bundle = bundle.slice(0, componentStart) + 'function OfferDeviceMockup(){return ' + mockupReact() + '}' + bundle.slice(componentEnd)
+const oldOfferCall = 'children:`Plano completo`}),(0,D.jsx)(Ye,{})'
+const newOfferCall = 'children:`Plano completo`}),(0,D.jsx)(OfferDeviceMockup,{})'
+if (!bundle.includes(oldOfferCall) && !bundle.includes(newOfferCall)) throw new Error('Complete-plan component call not found')
+bundle = bundle.replace(oldOfferCall, newOfferCall)
+const markupStart = html.indexOf('<div class="bundle')
+if (markupStart < 0) throw new Error('Offer markup not found')
+const divs = /<div\b[^>]*>|<\/div>/g
+divs.lastIndex = markupStart
+let depth = 0, markupEnd = -1, match
+while ((match = divs.exec(html))) {
+  depth += match[0].startsWith('</') ? -1 : 1
+  if (!depth) { markupEnd = divs.lastIndex; break }
+}
+if (markupEnd < 0) throw new Error('Incomplete offer markup')
+html = html.slice(0, markupStart) + mockupHtml() + html.slice(markupEnd)
+if (!html.includes('/assets/offer-devices.css')) {
+  html = html.replace('</head>', '<link rel="stylesheet" href="/sobremesas-de-travessa/assets/offer-devices.css">\n</head>')
+}
 // The active hero preloads its own app screen. Drop the obsolete cover preload.
 html = html.replace(/<link rel="preload" href="\.\/assets\/capa-480.webp"[^>]*\/>/, '')
 const digest = createHash('sha256').update(bundle).digest('hex').slice(0, 12)
