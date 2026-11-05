@@ -1,0 +1,120 @@
+/* Natal elegante: colors only, preserving the existing layout and content. */
+:root:root {
+  --paper: #fff8ed;
+  --cream: #f4ebd9;
+  --white: #fff8ed;
+  --green: #173f35;
+  --action: #173f35;
+  --gold: #866329;
+  --red: #173f35;
+  --ink: #382a24;
+  --muted: #655b4d;
+  --line: #dfcfad;
+  --section-light: #fff8ed;
+  --section-cream: #f4ebd9;
+  --chocolate: #382a24;
+  --raspberry: #173f35;
+  --elegant-gold: #c6a15b;
+}
+
+/* Higher specificity also preserves the theme after rebuilding the hero. */
+:root #hero10-root {
+  --h10-background: #fff8ed;
+  --h10-foreground: #382a24;
+  --h10-muted: #655b4d;
+  --h10-primary: #173f35;
+  --h10-line: #dfcfad;
+  --h10-accent: #f4ebd9;
+}
+.section-heading h2 em { color: var(--green); }
+.btn { color: var(--paper); border-color: var(--elegant-gold); }
+.btn:hover { background: #235748; }
+.btn-outline { color: var(--action); border-color: var(--action); }
+.btn-outline:hover { background: var(--action); color: var(--paper); }
+.eyebrow,
+:root #hero10-root .h10-eyebrow {
+  background: var(--cream);
+  border-color: var(--line);
+}
+:root #hero10-root .h10-cta:hover { background: #235748; }
+:root #hero10-root .h10-benefits { color: var(--ink); }
+:root #hero10-root .h10-benefits svg {
+  background: var(--action);
+  color: var(--paper);
+}
+.hero-avatar,
+:root #hero10-root .h10-avatars > span {
+  border-color: var(--elegant-gold);
+  box-shadow: 0 3px 7px #173f3512;
+}
+.avatar-placeholder { background: var(--cream); }
+.fan img { filter: drop-shadow(0 10px 9px #382a2427); }
+.fan .sheet { border-color: var(--line); }
+.fan .cover { border-left-color: var(--elegant-gold); }
+.quantity,
+:root #hero10-root .h10-quantity {
+  background: var(--green);
+  color: var(--paper);
+  border-color: var(--elegant-gold);
+  box-shadow: 0 5px 14px #173f3524;
+}
+.audience-photo img { box-shadow: 0 12px 25px #382a2415; }
+.preview-card > button { box-shadow: 0 8px 18px #382a2410; }
+.preview-card button > span { color: var(--paper); }
+.rail-arrow { box-shadow: 0 4px 10px #382a2418; }
+.recipe-card { box-shadow: 0 5px 14px #382a2408; }
+.timeline:before { background: var(--elegant-gold); }
+.timeline li > span {
+  color: var(--paper);
+  background: linear-gradient(145deg, #235748, #173f35);
+  border-color: var(--elegant-gold);
+  box-shadow: 0 0 0 5px var(--section-light), 0 5px 11px #173f3526;
+}
+.bonus-card {
+  border-color: var(--line);
+  box-shadow: 0 5px 16px #173f350b;
+}
+.bonus-art img { box-shadow: 5px 5px #86632955, 0 10px 20px #382a2420; }
+.included {
+  color: var(--green);
+  background: var(--cream);
+  border-color: var(--elegant-gold);
+}
+.bonus-included { color: var(--paper); box-shadow: 0 10px 24px #173f3520; }
+.bonus-included svg,
+.plan-badge svg { color: var(--elegant-gold); }
+.complete-plan {
+  border-color: var(--elegant-gold);
+  box-shadow: 0 12px 28px #173f3514;
+}
+.complete-plan .plan-badge {
+  color: var(--paper);
+  box-shadow: 0 7px 18px #173f3520;
+}
+.bundle-bonuses img { filter: drop-shadow(2px 4px 3px #382a2425); }
+.complete-plan .bundle-bonuses > p {
+  color: var(--green);
+  background: var(--cream);
+  border-color: var(--line);
+  box-shadow: 0 3px 7px #173f3515;
+}
+.complete-plan .plan-list li { border-bottom-color: var(--line); }
+.complete-plan > .btn { box-shadow: 0 5px #102e26, 0 10px 23px #173f3526; }
+.offer-trust,
+.offer-email { color: var(--green); }
+:root:root:root .complete-plan .offer-price > span { color: var(--muted); }
+.basic-limits svg,
+:root:root:root .basic-plan .basic-warning,
+:root .basic-warning svg { color: var(--gold); }
+.safety-layout article { border-color: var(--line); }
+.safety-layout article > svg { color: var(--green); }
+.author-photo { box-shadow: 0 12px 28px #173f3512; }
+.author-seals li { border-color: var(--line); }
+.modal { box-shadow: 0 20px 80px #173f3550; }
+.modal::backdrop { background: #102e26db; }
+.modal-bar button { color: var(--paper); }
+@media (width <= 600px) {
+  .timeline li > span {
+    box-shadow: 0 0 0 4px var(--section-light), 0 4px 9px #173f3526;
+  }
+}
