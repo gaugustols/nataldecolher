@@ -1,34 +1,18 @@
 # Natal de Colher
 
-Base inicial para desenvolver a landing page com Codex, versionar no GitHub e publicar na Vercel.
-
-## Estrutura
-
-- `public/index.html`: página inicial temporária, responsiva e em português.
-- `public/`: imagens, estilos e scripts públicos da landing page.
-- `vercel.json`: publicação estática da pasta `public`, sem instalação ou build.
+Landing page recuperada de Sobremesas de Travessa para o Natal, com publicação pelo fluxo GitHub → Vercel.
 
 ## Desenvolvimento
 
-A base usa HTML e CSS, sem dependências. Abra `public/index.html` no navegador para conferir a página. Podemos adicionar um framework quando o escopo exigir.
+O site usa os arquivos publicados originais: HTML, CSS, fontes, imagens e um bundle React compilado. Os componentes de desenvolvimento originais e o produto completo em PDF não foram recuperados.
 
-## Conexão com a Vercel
+- `public/sobremesas-de-travessa/`: arquivos publicados da oferta.
+- `public/index.html`: encaminhamento para a oferta.
+- `vercel.json`: hospedagem estática de `public`, redirecionamento da raiz e fallback de rotas.
+- `recovery/`: scripts de recuperação, inventário, auditoria e documentação das dependências externas.
 
-Importar o repositório `gaugustols/nataldecolher` na conta/equipe desejada e autorizar o acesso do aplicativo GitHub da Vercel ao repositório.
+Não há instalação ou build necessários para publicar esta versão. A Vercel acompanha a branch `main`. As próximas mudanças devem preservar os caminhos das imagens e ser verificadas antes do envio.
 
-- Framework Preset: `Other`.
-- Root Directory: raiz do repositório (`./`).
-- Output Directory: `public` (definido em `vercel.json`).
-- Build Command: vazio (definido em `vercel.json`).
-- Production Branch: `main`.
-- Variáveis de ambiente: nenhuma nesta base.
+Os links de checkout, preços, contato e rastreamento originais foram mantidos. Não foram testados pagamento nem entrega dos produtos. Veja os detalhes e comandos em [recovery/README.md](recovery/README.md).
 
-Após a integração, pushes na branch de produção geram deploys de produção; branches e pull requests podem gerar previews conforme as configurações da Vercel.
-
-A conexão da conta Vercel e o primeiro deploy precisam ser confirmados no serviço; este arquivo não comprova que já foram concluídos.
-
-## Próxima etapa
-
-Desenvolver layout, textos, imagens e chamada para ação. A página temporária contém `noindex, nofollow`; revisar essa diretiva antes do lançamento definitivo.
-
-Não versionar senhas, tokens ou arquivos `.env`.
+O backup ZIP, o espelho de trabalho e as capturas locais ficam fora do Git; os arquivos necessários à publicação estão em `public/`. Não versionar tokens, senhas, `.env` ou o ambiente Python.

@@ -1,0 +1,29 @@
+{
+  "site_files": 102,
+  "required_asset_references": 99,
+  "missing_required_assets": 0,
+  "excluded_original_metadata": 14,
+  "js_errors": [],
+  "failed_requests": [],
+  "http_errors": [],
+  "broken_images": [],
+  "tested_lightboxes": 10,
+  "tested_faqs": 4,
+  "mobile_width": {
+    "viewport": 390,
+    "document": 390
+  },
+  "deep_routes": [
+    {
+      "deep_route": "http://127.0.0.1:8765/sobremesas-de-travessa/preview/route",
+      "status": 200,
+      "server": "nataldecolher-recovery-v1"
+    }
+  ],
+  "publication": "not published",
+  "limitations": [
+    "Published compiled assets recovered; original project source and full product PDFs not recovered.",
+    "External checkout, payment and delivery not validated.",
+    "Original tracking configuration preserved; external tracking blocked only in QA."
+  ]
+}

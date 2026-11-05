@@ -7,3 +7,12 @@ dist/
 *.log
 .DS_Store
 Thumbs.db
+.venv/
+.cache/
+__pycache__/
+*.pyc
+nataldecolher-recuperado.zip
+recovery/site/
+recovery/capture_*/
+recovery/lztrack-original.js
+recovery/source-index.html

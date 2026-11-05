@@ -1,0 +1,111 @@
+{
+  "referenced": 99,
+  "present": 99,
+  "missing": [],
+  "excluded_metadata": [
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/01-foto-receita-02.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/12-foto-receita-25.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/03-foto-receita-04.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/08-foto-receita-10.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/09-foto-receita-24.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/11-foto-receita-26.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/07-foto-receita-06.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/06-foto-receita-08.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/10-foto-receita-23.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/14-foto-receita-30.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/04-foto-receita-03.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/05-foto-receita-07.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/13-foto-receita-28.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/02-foto-receita-01.png",
+      "reason": "Unused original PNG metadata in He; renderer uses name/fit/position and generated WebP URLs. HTTP 404 confirmed on source.",
+      "referenced_by": [
+        "sobremesas-de-travessa/assets/index-11BVa8Il.js"
+      ]
+    }
+  ],
+  "external": [
+    "https://lztrack.com/api/script.js?workspace_id=cmuyavq5d9k4vi1cho24uydqb&funnel_id=fnl_mvb61wx0_a04208d17e5344ffac"
+  ],
+  "generated_local": [
+    "sobremesas-de-travessa/favicon.svg"
+  ]
+}

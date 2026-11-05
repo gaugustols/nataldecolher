@@ -1,0 +1,752 @@
+{
+  "files": [
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/",
+      "path": "site\\sobremesas-de-travessa\\index.html",
+      "status": "cached",
+      "bytes": 63335
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/fonts/fira-condensed-800.woff2",
+      "path": "site\\sobremesas-de-travessa\\fonts\\fira-condensed-800.woff2",
+      "status": "cached",
+      "bytes": 25116
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/fonts/fira-sans-400.woff2",
+      "path": "site\\sobremesas-de-travessa\\fonts\\fira-sans-400.woff2",
+      "status": "cached",
+      "bytes": 23872
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/capa-320.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\capa-320.webp",
+      "status": "cached",
+      "bytes": 52192
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/index-11BVa8Il.js",
+      "path": "site\\sobremesas-de-travessa\\assets\\index-11BVa8Il.js",
+      "status": "cached",
+      "bytes": 256724
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/index-hfYQCBjy.css",
+      "path": "site\\sobremesas-de-travessa\\assets\\index-hfYQCBjy.css",
+      "status": "cached",
+      "bytes": 34849
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-11-240.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-11-240.webp",
+      "status": "cached",
+      "bytes": 12150
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-36-240.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-36-240.webp",
+      "status": "cached",
+      "bytes": 12636
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-121-240.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-121-240.webp",
+      "status": "cached",
+      "bytes": 14278
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-126-240.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-126-240.webp",
+      "status": "cached",
+      "bytes": 16054
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/hero-foto-1.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\hero-foto-1.webp",
+      "status": "cached",
+      "bytes": 5918
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/hero-foto-2.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\hero-foto-2.webp",
+      "status": "cached",
+      "bytes": 7952
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/hero-foto-3.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\hero-foto-3.webp",
+      "status": "cached",
+      "bytes": 5676
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/hero-foto-4.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\hero-foto-4.webp",
+      "status": "cached",
+      "bytes": 5608
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/fonts/fira-sans-700.woff2",
+      "path": "site\\sobremesas-de-travessa\\fonts\\fira-sans-700.woff2",
+      "status": "cached",
+      "bytes": 25012
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/cena-cozinha-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\cena-cozinha-640.webp",
+      "status": "cached",
+      "bytes": 46428
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-11-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-11-360.webp",
+      "status": "cached",
+      "bytes": 23404
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-12-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-12-360.webp",
+      "status": "cached",
+      "bytes": 13492
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-13-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-13-360.webp",
+      "status": "cached",
+      "bytes": 20710
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-14-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-14-360.webp",
+      "status": "cached",
+      "bytes": 15676
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-15-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-15-360.webp",
+      "status": "cached",
+      "bytes": 19816
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-126-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-126-360.webp",
+      "status": "cached",
+      "bytes": 31776
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-127-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-127-360.webp",
+      "status": "cached",
+      "bytes": 13820
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-128-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-128-360.webp",
+      "status": "cached",
+      "bytes": 21654
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-129-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-129-360.webp",
+      "status": "cached",
+      "bytes": 11886
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-02-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-02-360.webp",
+      "status": "cached",
+      "bytes": 17308
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-01-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-01-360.webp",
+      "status": "cached",
+      "bytes": 18774
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-04-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-04-360.webp",
+      "status": "cached",
+      "bytes": 13602
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-03-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-03-360.webp",
+      "status": "cached",
+      "bytes": 16554
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-07-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-07-360.webp",
+      "status": "cached",
+      "bytes": 10188
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-08-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-08-360.webp",
+      "status": "cached",
+      "bytes": 27426
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-06-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-06-360.webp",
+      "status": "cached",
+      "bytes": 16498
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-10-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-10-360.webp",
+      "status": "cached",
+      "bytes": 8560
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-24-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-24-360.webp",
+      "status": "cached",
+      "bytes": 15240
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-23-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-23-360.webp",
+      "status": "cached",
+      "bytes": 16498
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-26-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-26-360.webp",
+      "status": "cached",
+      "bytes": 21478
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-25-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-25-360.webp",
+      "status": "cached",
+      "bytes": 36224
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-28-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-28-360.webp",
+      "status": "cached",
+      "bytes": 16368
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-30-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-30-360.webp",
+      "status": "cached",
+      "bytes": 15048
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-precos-240.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-precos-240.webp",
+      "status": "cached",
+      "bytes": 18346
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-mensagens-240.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-mensagens-240.webp",
+      "status": "cached",
+      "bytes": 17402
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-aproveitamento-240.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-aproveitamento-240.webp",
+      "status": "cached",
+      "bytes": 23366
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/ana-maria-320.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\ana-maria-320.webp",
+      "status": "cached",
+      "bytes": 7184
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/ana-maria-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\ana-maria-640.webp",
+      "status": "cached",
+      "bytes": 17590
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/ana-maria-800.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\ana-maria-800.webp",
+      "status": "cached",
+      "bytes": 27022
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-aproveitamento-320.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-aproveitamento-320.webp",
+      "status": "cached",
+      "bytes": 36870
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-aproveitamento-480.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-aproveitamento-480.webp",
+      "status": "cached",
+      "bytes": 73456
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-aproveitamento-800.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-aproveitamento-800.webp",
+      "status": "cached",
+      "bytes": 169750
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-mensagens-320.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-mensagens-320.webp",
+      "status": "cached",
+      "bytes": 26010
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-mensagens-480.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-mensagens-480.webp",
+      "status": "cached",
+      "bytes": 41312
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-mensagens-800.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-mensagens-800.webp",
+      "status": "cached",
+      "bytes": 77920
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-precos-320.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-precos-320.webp",
+      "status": "cached",
+      "bytes": 28210
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-precos-480.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-precos-480.webp",
+      "status": "cached",
+      "bytes": 51586
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/bonus-precos-800.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\bonus-precos-800.webp",
+      "status": "cached",
+      "bytes": 112804
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/capa-400.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\capa-400.webp",
+      "status": "cached",
+      "bytes": 70760
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/capa-480.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\capa-480.webp",
+      "status": "cached",
+      "bytes": 101110
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/capa-800.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\capa-800.webp",
+      "status": "cached",
+      "bytes": 219588
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/cena-cozinha-1200.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\cena-cozinha-1200.webp",
+      "status": "cached",
+      "bytes": 103430
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/cena-cozinha-1600.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\cena-cozinha-1600.webp",
+      "status": "cached",
+      "bytes": 144812
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/cena-cozinha-800.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\cena-cozinha-800.webp",
+      "status": "cached",
+      "bytes": 55794
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-01-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-01-640.webp",
+      "status": "cached",
+      "bytes": 42334
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-02-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-02-640.webp",
+      "status": "cached",
+      "bytes": 36826
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-03-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-03-640.webp",
+      "status": "cached",
+      "bytes": 37332
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-04-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-04-640.webp",
+      "status": "cached",
+      "bytes": 35440
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-06-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-06-640.webp",
+      "status": "cached",
+      "bytes": 30566
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-07-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-07-640.webp",
+      "status": "cached",
+      "bytes": 25368
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-08-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-08-640.webp",
+      "status": "cached",
+      "bytes": 51390
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-10-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-10-640.webp",
+      "status": "cached",
+      "bytes": 17446
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-23-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-23-640.webp",
+      "status": "cached",
+      "bytes": 39794
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-24-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-24-640.webp",
+      "status": "cached",
+      "bytes": 39836
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-25-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-25-640.webp",
+      "status": "cached",
+      "bytes": 72338
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-26-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-26-640.webp",
+      "status": "cached",
+      "bytes": 53552
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-28-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-28-640.webp",
+      "status": "cached",
+      "bytes": 34912
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/foto-receita-30-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\foto-receita-30-640.webp",
+      "status": "cached",
+      "bytes": 28916
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-11-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-11-640.webp",
+      "status": "cached",
+      "bytes": 54044
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-12-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-12-640.webp",
+      "status": "cached",
+      "bytes": 31152
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-121-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-121-360.webp",
+      "status": "cached",
+      "bytes": 27838
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-121-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-121-640.webp",
+      "status": "cached",
+      "bytes": 65000
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-126-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-126-640.webp",
+      "status": "cached",
+      "bytes": 75876
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-127-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-127-640.webp",
+      "status": "cached",
+      "bytes": 32332
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-128-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-128-640.webp",
+      "status": "cached",
+      "bytes": 51144
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-129-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-129-640.webp",
+      "status": "cached",
+      "bytes": 28428
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-13-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-13-640.webp",
+      "status": "cached",
+      "bytes": 49258
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-130-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-130-360.webp",
+      "status": "cached",
+      "bytes": 18254
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-130-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-130-640.webp",
+      "status": "cached",
+      "bytes": 42602
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-14-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-14-640.webp",
+      "status": "cached",
+      "bytes": 37506
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-15-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-15-640.webp",
+      "status": "cached",
+      "bytes": 46886
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-36-360.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-36-360.webp",
+      "status": "cached",
+      "bytes": 24330
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-36-640.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-36-640.webp",
+      "status": "cached",
+      "bytes": 57128
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/favicon.svg",
+      "path": "site\\sobremesas-de-travessa\\favicon.svg",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/favicon.svg"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-10-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-10-1063.webp",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-10-1063.webp"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-11-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-11-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 109584
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-12-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-12-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 58264
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-121-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-121-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 134418
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-124-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-124-1063.webp",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-124-1063.webp"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-126-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-126-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 158504
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-127-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-127-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 59568
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-128-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-128-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 95064
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-129-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-129-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 55272
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-13-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-13-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 92630
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-130-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-130-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 80680
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-14-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-14-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 73136
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-15-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-15-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 87476
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-36-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-36-1063.webp",
+      "http": 200,
+      "status": "downloaded",
+      "bytes": 115874
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-9-1063.webp",
+      "path": "site\\sobremesas-de-travessa\\assets\\pagina-9-1063.webp",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/pagina-9-1063.webp"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/01-foto-receita-02.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\01-foto-receita-02.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/01-foto-receita-02.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/02-foto-receita-01.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\02-foto-receita-01.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/02-foto-receita-01.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/03-foto-receita-04.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\03-foto-receita-04.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/03-foto-receita-04.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/04-foto-receita-03.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\04-foto-receita-03.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/04-foto-receita-03.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/05-foto-receita-07.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\05-foto-receita-07.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/05-foto-receita-07.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/06-foto-receita-08.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\06-foto-receita-08.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/06-foto-receita-08.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/07-foto-receita-06.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\07-foto-receita-06.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/07-foto-receita-06.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/08-foto-receita-10.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\08-foto-receita-10.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/08-foto-receita-10.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/09-foto-receita-24.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\09-foto-receita-24.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/09-foto-receita-24.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/10-foto-receita-23.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\10-foto-receita-23.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/10-foto-receita-23.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/11-foto-receita-26.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\11-foto-receita-26.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/11-foto-receita-26.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/12-foto-receita-25.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\12-foto-receita-25.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/12-foto-receita-25.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/13-foto-receita-28.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\13-foto-receita-28.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/13-foto-receita-28.png"
+    },
+    {
+      "url": "https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/14-foto-receita-30.png",
+      "path": "site\\sobremesas-de-travessa\\assets\\public\\assets\\originais\\fotos-vitrine\\14-foto-receita-30.png",
+      "http": 404,
+      "status": "error",
+      "error": "404 Client Error: Not Found for url: https://aprendizadoilimitado.site/sobremesas-de-travessa/assets/public/assets/originais/fotos-vitrine/14-foto-receita-30.png"
+    }
+  ],
+  "external": [
+    "https://connect.facebook.net/en_US/fbevents.js",
+    "https://lztrack.com/api/script.js?workspace_id=cmuyavq5d9k4vi1cho24uydqb&funnel_id=fnl_mvb61wx0_a04208d17e5344ffac"
+  ]
+}
