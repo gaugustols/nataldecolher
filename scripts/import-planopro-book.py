@@ -62,6 +62,57 @@ def care_rows(page):
     return rows
 
 
+def numbered_guide(text, footer, page_number, section_id, label):
+    body = without_footer(text, footer, page_number)
+    markers = list(re.finditer(r'(?m)^(\d+)\n', body))
+    prefix = body[:markers[0].start()].splitlines()
+    section = {'id': section_id, 'label': label, 'title': clean(' '.join(prefix[2:-1])),
+               'intro': clean(prefix[-1]), 'steps': []}
+    for i, marker in enumerate(markers):
+        chunk = body[marker.end():markers[i + 1].start() if i + 1 < len(markers) else len(body)].strip()
+        if '\nUm exemplo de cinco sabores:' in chunk:
+            chunk, note = chunk.split('\nUm exemplo de cinco sabores:', 1)
+            section['note'] = 'Um exemplo de cinco sabores: ' + clean(note)
+        title, paragraph = clean(chunk).split('. ', 1)
+        section['steps'].append([title + '.', paragraph])
+    return section
+
+
+def build_guide(texts, source):
+    sections = [
+        numbered_guide(texts[1], 'Como usar', 2, 'cardapio', 'Cardápio'),
+        numbered_guide(texts[3], 'Antes de produzir', 4, 'ingredientes', 'Ingredientes'),
+        numbered_guide(texts[4], 'Fluxo de produção', 5, 'resfriamento', 'Resfriamento'),
+    ]
+    with pdfplumber.open(source) as pdf:
+        page = pdf.pages[155]
+        words = page.extract_words()
+        top = next(w['top'] for w in words if w['text'] == 'Família')
+        bottom = next(w['top'] for w in words if w['text'] == 'Ao')
+        borders = sorted({round(e['top'], 2) for e in page.edges
+                          if abs(e['top'] - e['bottom']) < .5 and abs(e['x0'] - 29) < .5
+                          and e['x1'] > 450 and top < e['top'] < bottom})
+        assert len(borders) == 7
+        rows = [[clean(page.crop((29, a, 175, b)).extract_text()),
+                 clean(page.crop((175, a, 453, b)).extract_text())]
+                for a, b in zip(borders, borders[1:])]
+    production = without_footer(texts[155], 'Consulta de produção', 156)
+    sections.append({'id': 'producao', 'label': 'Produção', 'title': 'Organize as etapas',
+                     'intro': clean(between(production, 'Organize as etapas', 'Família de trabalho')),
+                     'rows': rows, 'note': 'Ao aumentar a produção: ' + clean(production.split('Ao aumentar a produção:', 1)[1])})
+    sections.append(numbered_guide(texts[156], 'Consulta de expedição', 157, 'entrega', 'Entrega'))
+    general = without_footer(texts[157], 'Informações gerais', 158)
+    references_text = between(general, 'Fontes culinárias por número de receita', 'Base técnica:')
+    markers = list(re.finditer(r'(?m)^(\d{2}) · ', references_text))
+    references = [[int(m[1]), clean(references_text[m.end():markers[i + 1].start() if i + 1 < len(markers) else len(references_text)])]
+                  for i, m in enumerate(markers)]
+    assert [r[0] for r in references] == list(range(1, 31))
+    sections.append({'id': 'notas', 'label': 'Notas', 'title': 'Notas e referências',
+                     'text': clean(between(general, 'Referências de pesquisa e informações gerais desta edição.', 'Fontes culinárias por número de receita')),
+                     'references': references, 'note': 'Base técnica: ' + clean(general.split('Base técnica:', 1)[1])})
+    return sections
+
+
 def render_diagram(job):
     number, physical_page, source, poppler = job
     destination = ASSETS / f'montagem-receita-{number:02}.webp'
@@ -80,7 +131,7 @@ def main():
     parser.add_argument('--poppler', default=shutil.which('pdftoppm'))
     parser.add_argument('--verify', action='store_true', help='Compare the imported content with the source without rewriting files.')
     args = parser.parse_args()
-    source = args.source or next((ROOT / 'conteúdo').glob('*.pdf'))
+    source = args.source or next(p for p in (ROOT / 'conteúdo').glob('*.pdf') if '[Principal]' in p.name)
     assert args.poppler, 'pdftoppm is required to preserve the original assembly diagrams.'
     CACHE.mkdir(parents=True, exist_ok=True)
     reader = PdfReader(source)
@@ -177,36 +228,36 @@ def main():
             }
             report.append({'number': number, 'id': recipe_id, 'name': name, 'pdfPages': details[recipe_id]['pdfPages'],
                            'ingredients': sum(len(g['items']) for g in groups.values()), 'steps': len(steps)})
+    guide = build_guide(texts, source)
     if args.verify:
         assert product['recipes'] == recipes, 'Catalog differs from the supplied PDF.'
         assert product['details'] == details, 'Recipe contents differ from the supplied PDF.'
         assert all((ASSETS / s['diagram']).is_file() for s in details.values())
-        copied = APP / product['book']['url']
-        assert sha256(source.read_bytes()).hexdigest() == sha256(copied.read_bytes()).hexdigest()
-        print('PASS: all 30 recipes match the supplied PDF; ingredients, quantities, steps and original PDF verified.')
+        assert product['guide'] == guide, 'Production guide differs from the supplied material.'
+        assert sha256(source.read_bytes()).hexdigest() == product['book']['sha256']
+        assert 'url' not in product['book']
+        print('PASS: 30 recipes and 6 production guide sections match the source; no PDF download is published.')
         return
     jobs = [(n, 9 + (n - 1) * 5, source, args.poppler) for n in range(1, 31)]
     with ThreadPoolExecutor(max_workers=4) as pool:
         list(pool.map(render_diagram, jobs))
-    files = APP / 'arquivos'
-    files.mkdir(exist_ok=True)
-    destination = files / 'sobremesas-de-travessa-natal-2026.pdf'
-    shutil.copyfile(source, destination)
     digest = sha256(source.read_bytes()).hexdigest()
-    assert digest == sha256(destination.read_bytes()).hexdigest()
     product['recipes'], product['details'] = recipes, details
     product.pop('samples', None)
     product['missing'] = 'Este conteúdo ainda não está disponível na biblioteca.'
     product['book'] = {
-        'url': 'arquivos/' + destination.name, 'pages': 158, 'sha256': digest,
+        'pages': 158, 'sha256': digest,
         'notes': clean(between(texts[157], 'Referências de pesquisa e informações gerais desta edição.', 'Fontes culinárias por número de receita')),
     }
-    product['materials'][0].update(url=product['book']['url'], format='PDF')
+    product['guide'] = guide
+    product.pop('materials', None)
+    for bonus in product['bonuses']:
+        bonus.pop('materials', None)
     header = '/* Conteúdo integral importado do PDF fornecido. Regenerar com scripts/import-planopro-book.py. */\n'
     (APP / 'data.js').write_text(header + 'window.PRODUCT = ' + json.dumps(product, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
     (CACHE / 'report.json').write_text(json.dumps({'sourceSha256': digest, 'pages': 158, 'recipes': report}, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps({'recipes': len(recipes), 'completeDetails': len(details), 'ingredients': sum(r['ingredients'] for r in report),
-                      'steps': sum(r['steps'] for r in report), 'diagrams': 30, 'originalPdfBytes': destination.stat().st_size}, ensure_ascii=False))
+                      'steps': sum(r['steps'] for r in report), 'diagrams': 30, 'guideSections': len(guide)}, ensure_ascii=False))
 
 
 if __name__ == '__main__':

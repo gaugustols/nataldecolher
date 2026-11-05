@@ -1,5 +1,4 @@
 import assert from 'node:assert/strict'
-import { createHash } from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 import vm from 'node:vm'
@@ -50,8 +49,12 @@ for (const [index, recipe] of product.recipes.entries()) {
 }
 assert.equal(ingredientCount, 252)
 assert.equal(stepCount, 120)
-assert.equal(product.materials[0].url, product.book.url)
-const pdf = fs.readFileSync(asset(product.book.url))
-assert.equal(pdf.subarray(0, 5).toString(), '%PDF-')
-assert.equal(createHash('sha256').update(pdf).digest('hex'), product.book.sha256)
-console.log(`PASS: 30 complete recipes, ${ingredientCount} ingredient rows, ${stepCount} preparation steps, 30 diagrams and original PDF.`)
+assert.equal(product.book.url, undefined)
+assert.equal(product.materials, undefined)
+assert.match(product.book.sha256, /^[a-f0-9]{64}$/)
+assert.equal(product.guide.length, 6)
+assert.equal(product.guide.find(s => s.id === 'producao').rows.length, 6)
+assert.equal(product.guide.find(s => s.id === 'entrega').steps.length, 5)
+assert.equal(product.guide.find(s => s.id === 'notas').references.length, 30)
+assert.equal(fs.existsSync(path.join(app, 'arquivos/sobremesas-de-travessa-natal-2026.pdf')), false)
+console.log(`PASS: 30 complete recipes, ${ingredientCount} ingredient rows, ${stepCount} preparation steps, 30 diagrams, 6 guide sections and no published PDF.`)

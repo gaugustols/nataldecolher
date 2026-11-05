@@ -334,10 +334,7 @@ window.PRODUCT = {
       "photo": "bonus-precos-240.webp",
       "icon": "calculator",
       "description": "Consulte o guia, os exemplos e as fichas para pensar seus preços com base nos custos.",
-      "detail": "Aprenda quanto cobrar pelas travessas com base nos seus custos, usando exemplos e fichas simples.",
-      "materials": [
-        "guia-precos"
-      ]
+      "detail": "Aprenda quanto cobrar pelas travessas com base nos seus custos, usando exemplos e fichas simples."
     },
     {
       "id": "whatsapp",
@@ -346,9 +343,6 @@ window.PRODUCT = {
       "icon": "message",
       "description": "Encontre mensagens para copiar, adaptar e conversar com seus clientes.",
       "detail": "Copie e adapte mensagens prontas para divulgar suas sobremesas, responder clientes e fechar pedidos.",
-      "materials": [
-        "kit-whatsapp"
-      ],
       "messages": null
     },
     {
@@ -357,56 +351,10 @@ window.PRODUCT = {
       "photo": "bonus-aproveitamento-240.webp",
       "icon": "leaf",
       "description": "Consulte as fichas de aproveitamento dos ingredientes.",
-      "detail": "Veja como aproveitar ingredientes que sobraram, com fichas que explicam quando e como usar.",
-      "materials": [
-        "guia-sobras"
-      ]
-    }
-  ],
-  "materials": [
-    {
-      "id": "livro",
-      "name": "Livro principal · 30 receitas",
-      "group": "Livro de receitas",
-      "format": "PDF",
-      "url": "arquivos/sobremesas-de-travessa-natal-2026.pdf",
-      "plan": "Completo"
-    },
-    {
-      "id": "guia-precos",
-      "name": "Guia de Preços de Natal 2026",
-      "group": "Bônus",
-      "format": null,
-      "url": null,
-      "plan": "Completo"
-    },
-    {
-      "id": "kit-whatsapp",
-      "name": "Kit de WhatsApp para Encomendas de Natal",
-      "group": "Bônus",
-      "format": null,
-      "url": null,
-      "plan": "Completo"
-    },
-    {
-      "id": "guia-sobras",
-      "name": "Guia de aproveitamento: Sobras que viram lucro",
-      "group": "Bônus",
-      "format": null,
-      "url": null,
-      "plan": "Completo"
-    },
-    {
-      "id": "basico",
-      "name": "Material das 5 receitas do básico",
-      "group": "Plano básico",
-      "format": null,
-      "url": null,
-      "plan": "Básico"
+      "detail": "Veja como aproveitar ingredientes que sobraram, com fichas que explicam quando e como usar."
     }
   ],
   "book": {
-    "url": "arquivos/sobremesas-de-travessa-natal-2026.pdf",
     "pages": 158,
     "sha256": "bd906a5e46bb3583e4eb97b8b76d909a6a77cc44d8e127bf8cf998424d459d55",
     "notes": "Elaboração documental, sem testes físicos de cozinha ou análises laboratoriais das formulações. As imagens de abertura são ilustrativas, geradas por IA; os desenhos não têm escala. Fontes consultadas orientam famílias culinárias e técnicas: as adaptações não herdam selos de teste dos autores. Rendimentos são estimativas editoriais da soma dos ingredientes, com hipóteses de evaporação e perdas, sem pesagem final. Para a conta aproximada, água, leite e sucos em mL são aproximados a g; isso não converte litros de embalagem em quilos. As porções resultam da divisão do peso estimado por 100 g ou 150 g. Tempos são orientativos. Não foram estabelecidos validade nem congelamento para as formulações."
@@ -3840,5 +3788,270 @@ window.PRODUCT = {
         155
       ]
     }
-  }
+  },
+  "guide": [
+    {
+      "id": "cardapio",
+      "label": "Cardápio",
+      "title": "Escolha seu cardápio. Depois, organize a produção.",
+      "intro": "Trinta opções para escolher de acordo com sua clientela e sua cozinha.",
+      "steps": [
+        [
+          "Comece com quatro a seis sabores.",
+          "Escolha dois sabores familiares, um frutado ou cítrico, uma composição econômica e um especial. Um sexto sabor só entra se houver espaço, tempo e procura. Não é necessário oferecer as 30 opções juntas."
+        ],
+        [
+          "Evite repetir o mesmo perfil.",
+          "Chocolate, fruta, coco, amendoim e sabores caramelados podem se complementar. Para um cardápio pequeno, evite escolher duas bananas ou três sobremesas de coco de uma vez."
+        ],
+        [
+          "Leia a receita inteira antes de começar.",
+          "Cada ficha traz abertura, ingredientes por preparo, sequência, sinais de ponto, montagem desenhada e cuidados. As letras A, B e C ajudam a separar os componentes e a decoração."
+        ],
+        [
+          "Reserve espaço na geladeira.",
+          "Planeje onde resfriar, montar e guardar as travessas. Equipamento cheio demais demora a retirar calor. Organize também o horário de acabamento, retirada e transporte."
+        ]
+      ],
+      "note": "Um exemplo de cinco sabores: pavê de chocolate e baunilha (01), mousse de maracujá (03), pavê de pêssego (06), pavê de paçoca (18) e pavê de panetone (23). Ajuste à sua clientela."
+    },
+    {
+      "id": "ingredientes",
+      "label": "Ingredientes",
+      "title": "Pese, separe e escolha a embalagem",
+      "intro": "Uma boa organização evita trocas de ingrediente e retrabalho.",
+      "steps": [
+        [
+          "Pese o que a ficha realmente pede.",
+          "Fruta descascada não é o mesmo peso da fruta inteira. Pêssego é pesado drenado; ovos, sem casca. Raspas, caldas e decoração entram nas quantidades da receita. Separe tudo em potes identificados."
+        ],
+        [
+          "Confira o tipo do ingrediente.",
+          "Creme UHT e creme fresco para bater têm funções diferentes. Tapioca granulada não é goma de frigideira. Chocolate e cobertura fracionada não são equivalentes. Leia a especificação antes de comprar."
+        ],
+        [
+          "Use embalagem adequada ao processo.",
+          "Escolha recipiente próprio para contato com alimento e para a condição de uso. Refrigeração e forno exigem compatibilidades diferentes. Pudim e cocada assados ficam no próprio refratário, com tampa compatível."
+        ],
+        [
+          "Deixe folga e confira o fechamento.",
+          "As travessas dos desenhos são esquemas. Distribua em um ou mais recipientes sem ultrapassar a borda útil. Registre modelo, dimensões internas e altura de enchimento do recipiente escolhido. Capacidade em litros não determina quilos de sobremesa."
+        ]
+      ]
+    },
+    {
+      "id": "resfriamento",
+      "label": "Resfriamento",
+      "title": "Resfrie, monte e entregue com cuidado",
+      "intro": "O controle de frio acompanha a sobremesa até o recebimento.",
+      "steps": [
+        [
+          "Resfrie os preparos cozidos.",
+          "Trabalhe com recipientes rasos. Use banho de água com gelo quando o material do recipiente permitir, sem entrar água no alimento. Mexa com utensílio limpo e meça no centro. Não deixe uma panela cheia esfriar na bancada."
+        ],
+        [
+          "Acompanhe o termômetro.",
+          "Reduza de 60 °C a 10 °C em até 2 horas e depois mantenha abaixo de 5 °C. Adote meta de 4 °C ou menos e confira o alimento, não apenas o painel da geladeira. Vidro quente não deve sofrer choque térmico; siga o fabricante."
+        ],
+        [
+          "Higienize frutas e utensílios.",
+          "Use água potável, mãos e superfícies limpas. Para frutas consumidas cruas, siga o rótulo de sanitizante próprio para alimentos. Concentração e tempo de contato dependem do produto. Seque antes de cortar e montar."
+        ],
+        [
+          "Proteja e identifique a entrega.",
+          "Mantenha refrigerado, tampe e transporte nivelado em caixa térmica limpa com elementos frios. Evite água ou gelo em contato direto com a embalagem. Monitore a temperatura e oriente refrigeração imediata. Rotule ingredientes, alergênicos e dados do preparo conforme as exigências aplicáveis."
+        ]
+      ]
+    },
+    {
+      "id": "producao",
+      "label": "Produção",
+      "title": "Organize as etapas",
+      "intro": "Compartilhar compras ajuda; cada preparo mantém sua própria formulação.",
+      "rows": [
+        [
+          "Cremes cozidos de leite e amido",
+          "01, 02, 05 a 09, 14, 17, 18, 22 a 24, 27 e 29. Separe cada fórmula; não trate como um creme universal."
+        ],
+        [
+          "Ganache e chocolate",
+          "02, 08, 11 e 30. Cada proporção tem uma função. Separe o chocolate do acabamento antes de derreter."
+        ],
+        [
+          "Frutas cozidas e compotas",
+          "05, 07, 09, 14, 16, 20, 21, 25 e 29. Cozinhe e resfrie separadamente dos cremes."
+        ],
+        [
+          "Aeração com creme fresco",
+          "11, 26, 28 e 30. Tigela e creme devem estar frios; bata perto da montagem."
+        ],
+        [
+          "Etapas de forno",
+          "10, 15, 21, 24 e 27. Planeje forno, recipientes adequados e resfriamento."
+        ],
+        [
+          "Fruta fresca na montagem",
+          "02, 26 e 28. Higienização, secagem e corte no momento certo reduzem líquido livre."
+        ]
+      ],
+      "note": "Ao aumentar a produção: multiplique as quantidades por peso, mas não multiplique automaticamente os tempos. Divida lotes conforme panela, forno, batedeira, capacidade de resfriamento e espaço de geladeira."
+    },
+    {
+      "id": "entrega",
+      "label": "Entrega",
+      "title": "Confira antes de sair",
+      "intro": "Uma checagem curta ajuda a entregar o que foi combinado.",
+      "steps": [
+        [
+          "Receita e quantidade.",
+          "Confira nome do sabor, número de recipientes e identificação do pedido. Porções de 100 g e de 150 g representam serviços diferentes: combine a referência com a cliente."
+        ],
+        [
+          "Recipiente e acabamento.",
+          "Verifique tampa fechada, borda limpa, folga acima do doce e base apoiada. Decoração baixa ajuda a manter o acabamento íntegro no transporte."
+        ],
+        [
+          "Informação de ingredientes.",
+          "Revise alergênicos conforme todos os rótulos usados. Troca de marca pode mudar leite, soja, trigo, ovos e contatos cruzados. Não use alegações de ausência sem base."
+        ],
+        [
+          "Frio e rota.",
+          "Confirme alimento refrigerado, caixa térmica preparada e trajeto organizado. Proteja de tombamento, sol e calor. Não deixe as travessas esperando fora da geladeira."
+        ],
+        [
+          "Recebimento.",
+          "Oriente a cliente a refrigerar imediatamente e manter a sobremesa protegida até servir. Informe as condições específicas definidas para sua produção e a legislação local aplicável."
+        ]
+      ]
+    },
+    {
+      "id": "notas",
+      "label": "Notas",
+      "title": "Notas e referências",
+      "text": "Elaboração documental, sem testes físicos de cozinha ou análises laboratoriais das formulações. As imagens de abertura são ilustrativas, geradas por IA; os desenhos não têm escala. Fontes consultadas orientam famílias culinárias e técnicas: as adaptações não herdam selos de teste dos autores. Rendimentos são estimativas editoriais da soma dos ingredientes, com hipóteses de evaporação e perdas, sem pesagem final. Para a conta aproximada, água, leite e sucos em mL são aproximados a g; isso não converte litros de embalagem em quilos. As porções resultam da divisão do peso estimado por 100 g ou 150 g. Tempos são orientativos. Não foram estabelecidos validade nem congelamento para as formulações.",
+      "references": [
+        [
+          1,
+          "Panelinha — Pavê de chocolate"
+        ],
+        [
+          2,
+          "Receitas Nestlé — Bombom de uva"
+        ],
+        [
+          3,
+          "Receitas Nestlé — Mousse de maracujá"
+        ],
+        [
+          4,
+          "Receitas Nestlé — Torta de limão"
+        ],
+        [
+          5,
+          "Panelinha — Manjar de coco"
+        ],
+        [
+          6,
+          "Receitas Nestlé — Pavê de pêssego"
+        ],
+        [
+          7,
+          "Receitas Nestlé — Delícia de abacaxi"
+        ],
+        [
+          8,
+          "Receitas Nestlé — Coco e chocolate na travessa"
+        ],
+        [
+          9,
+          "Renata — Doce de leite e ameixa"
+        ],
+        [
+          10,
+          "Panelinha — Pudim de leite"
+        ],
+        [
+          11,
+          "Receitas Nestlé — Mousse clássica de chocolate"
+        ],
+        [
+          12,
+          "Receitas Nestlé — Gelatina mosaico"
+        ],
+        [
+          13,
+          "Panelinha — Arroz-doce com especiarias"
+        ],
+        [
+          14,
+          "Prefeitura de Belo Horizonte — Manual de receitas, 2013"
+        ],
+        [
+          15,
+          "Panelinha — Cocada de forno"
+        ],
+        [
+          16,
+          "Receitas Nestlé — Abóbora com coco"
+        ],
+        [
+          17,
+          "Panelinha — Sagu de uva"
+        ],
+        [
+          18,
+          "Receitas Nestlé — Pavê de paçoca"
+        ],
+        [
+          19,
+          "Cook’n Enjoy — Romeu e Julieta, vídeo 941"
+        ],
+        [
+          20,
+          "Panelinha — Tapioca de colher"
+        ],
+        [
+          21,
+          "Panelinha — Crumble de maçã e aveia"
+        ],
+        [
+          22,
+          "SICAL / Nestlé Portugal — Pavê de café"
+        ],
+        [
+          23,
+          "Receitas Nestlé — Pavê de panetone"
+        ],
+        [
+          24,
+          "E. Donizetti Goes / Receitas Nestlé — Pavê de nozes da vó"
+        ],
+        [
+          25,
+          "Receitas Nestlé — Cheesecake de frutas vermelhas"
+        ],
+        [
+          26,
+          "Receitas Nestlé — Banoffee na travessa"
+        ],
+        [
+          27,
+          "Panelinha — Brownie"
+        ],
+        [
+          28,
+          "Panelinha — Merengue com morango"
+        ],
+        [
+          29,
+          "Receitas Nestlé — Damasco em sobremesas"
+        ],
+        [
+          30,
+          "Receitas Nestlé — Torta holandesa de travessa"
+        ]
+      ],
+      "note": "Base técnica: Anvisa, RDC 216/2004, preparo, resfriamento e transporte; Guia 16, versão 3 / 2025, determinação de validade. Atender também às exigências locais. Consulta: 15/10/2026. “Econômico” é relativo à composição; não garante preço baixo ou margem."
+    }
+  ]
 };
