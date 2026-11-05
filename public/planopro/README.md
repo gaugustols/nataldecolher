@@ -1,6 +1,6 @@
 # Sobremesas de Travessa para o Natal — aplicativo offline
 
-Abra `index.html` diretamente no navegador. A navegação, fontes, imagens, duas amostras, favoritos, cardápio e checklists funcionam sem internet e sem build. Mantenha os arquivos `index.html`, `style.css`, `data.js`, `app.js` e a pasta `assets/` juntos.
+Abra `index.html` diretamente no navegador. A navegação, fontes, imagens, duas amostras, favoritos, cardápio e checklists funcionam sem internet e sem build. Mantenha os arquivos `index.html`, `style.css`, `natal-elegante.css`, `data.js`, `app.js` e a pasta `assets/` juntos.
 
 ## O que já funciona
 
@@ -27,7 +27,8 @@ O aplicativo não exige login nem valida compras nesta versão. Ele não libera 
 
 - `data.js`: todo o conteúdo editorial, categorias, receitas, bônus e downloads; comentários `TROCAR`/`COLAR LINK REAL` identificam pendências.
 - `app.js`: navegação, pesquisa, seleção, checklists e estado local. Nenhum framework ou CDN.
-- `style.css`: identidade creme, castanho e rosa, com estilos responsivos.
+- `style.css`: estrutura e estilos responsivos do aplicativo.
+- `natal-elegante.css`: paleta verde pinheiro, marfim e dourado, fonte de sistema compartilhada com a landing page e ajustes de alinhamento no celular.
 - `assets/`: arquivos copiados da landing recuperada.
 
 Para hospedar como estático, enviar esta pasta inteira. No repositório atual, a rota de hospedagem é `/planopro/`, independente da landing em `/sobremesas-de-travessa/`.

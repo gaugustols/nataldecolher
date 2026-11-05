@@ -1,0 +1,114 @@
+/* Shared visual identity with the landing page; the app remains self-contained. */
+:root:root {
+  --paper: #fff8ed;
+  --pink: #f4ebd9;
+  --brown: #173f35;
+  --berry: #173f35;
+  --ink: #382a24;
+  --muted: #655b4d;
+  --line: #dfcfad;
+  --green: #173f35;
+  --white: #fff8ed;
+  --gold: #c6a15b;
+  --gold-ink: #866329;
+  --shadow: 0 8px 28px #382a2408;
+  --app-font: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root:root,
+:root:root * { font-family: var(--app-font); }
+:root :is(h1, h2, h3) { font-weight: 700; }
+.welcome-copy h1,
+.recipe-intro h1 { letter-spacing: -0.05em; }
+.sidebar { background: var(--paper); border-color: var(--line); }
+.brand { padding-inline: 0; }
+.brand-icon { border-color: var(--gold); flex-shrink: 0; }
+.brand > span:last-child { min-width: 0; }
+.nav-link:hover { background: var(--pink); }
+.sidebar-bottom,
+.masthead,
+.app-footer,
+.start-banner,
+.section-card,
+.library-note,
+.recipe-card,
+.catalog-summary,
+.search-box,
+.chip,
+.empty-state,
+.recipe-intro-image,
+.recipe-facts,
+.recipe-jump,
+.reading-card,
+.ingredient-group,
+.check-row,
+.care-table,
+.care-table > div,
+.bonus-card,
+.bonus-art,
+.material-row,
+.onboarding li { border-color: var(--line); }
+.sidebar-bottom img { border-color: var(--paper); }
+.masthead { background: #fff8edf5; }
+.bottom-nav { background: #fff8edf8; border-color: var(--line); }
+.skip-link,
+.nav-link b { color: var(--paper); }
+.button { color: var(--paper); border-color: var(--gold); }
+.button:hover { background: #235748; }
+.button.outline { color: var(--berry); border-color: var(--berry); }
+.button.outline:hover { background: var(--pink); }
+.unavailable,
+.unavailable:hover { color: var(--muted); background: #eee7db; border-color: var(--line); }
+.welcome-card { background: var(--pink); border-color: var(--line); }
+.welcome-copy > p:not(.eyebrow) { color: var(--muted); }
+.book-art > img { box-shadow: 8px 12px 0 #173f351a, 0 18px 26px #382a2422; }
+.art-ring { border-color: var(--gold); background: #fff8ed3b; }
+.art-ring::after { border-color: #c6a15b70; }
+.edition-stamp { border-color: var(--gold); box-shadow: 0 5px 10px #173f3510; }
+.section-card:hover { box-shadow: 0 12px 28px #173f3511; }
+.card-arrow { color: var(--gold-ink); }
+.recipe-card:hover { box-shadow: 0 14px 26px #173f3512; }
+.sample-tag,
+.favorite { background: #fff8eded; }
+.favorite { border-color: #fff8ed88; }
+.favorite:hover { background: var(--paper); }
+.selected .icon { fill: #173f351a; }
+.missing-note { background: var(--pink); border-color: var(--line); color: var(--muted); }
+.missing-note > .icon { color: var(--gold-ink); }
+.missing-note strong { color: var(--ink); }
+.check-row.done strong { color: var(--muted); }
+.reading-card .note,
+.diagram-button,
+.diagram-button > span { background: var(--pink); border-color: var(--line); color: var(--green); }
+:root .bonus-card .bonus-art { background: var(--pink); }
+.bonus-art img { box-shadow: 5px 6px 0 #173f3519, 0 9px 15px #382a2420; }
+.bonus-detail-art img { box-shadow: 8px 9px 0 #173f351a; }
+.material-row small { color: var(--muted); }
+.toast { box-shadow: 0 8px 20px #173f3529; }
+dialog::backdrop { background: #102e26e0; }
+
+/* Allow the wider system font to wrap without pushing mobile controls aside. */
+.start-banner > div,
+.section-card > div,
+.reading-title > div,
+.welcome-copy,
+.book-art { min-width: 0; }
+.start-banner > .icon,
+.card-arrow { flex-shrink: 0; }
+@media (min-width: 551px) and (max-width: 1190px) {
+  .welcome-card { column-gap: 24px; }
+}
+@media (max-width: 760px) {
+  .mobile-brand { flex: 1; min-width: 0; }
+  .edition { flex-shrink: 0; }
+}
+@media (max-width: 550px) {
+  .section-header { flex-wrap: wrap; row-gap: 10px; }
+  .section-header > div { flex: 1 1 220px; min-width: 0; }
+  .section-header .text-link { margin-left: auto; flex-shrink: 0; }
+  .recipe-actions { flex-wrap: wrap; }
+  .recipe-actions .button { flex: 1 1 150px; }
+  .recipe-jump { gap: 4px; flex-wrap: wrap; justify-content: flex-start; }
+  .onboarding li > span { flex: 0 0 28px; text-align: center; }
+  .onboarding li > div { flex: 1; min-width: 0; }
+}
