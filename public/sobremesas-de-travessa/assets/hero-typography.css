@@ -1,7 +1,13 @@
 /* Typography from the AnimatedMarqueeHero reference; retain existing sizes. */
-:root #hero10-root h1,
-:root #hero10-root h1 + p {
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+:root {
+  --landing-font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Cover text, controls, prices and dialog content without changing their styles. */
+:root:root,
+:root #hero10-root,
+:root:root :is(#hero10-root, #root) :where(*) {
+  font-family: var(--landing-font-family);
 }
 
 :root #hero10-root h1 {
@@ -15,6 +21,5 @@
 
 /* Section, card and dialog titles share the hero's font; size and color inherit. */
 :root:root #root :is(h2, h3) {
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
