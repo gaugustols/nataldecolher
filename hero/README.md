@@ -6,6 +6,8 @@ A hero atual usa `ProductMockup` de `hero/landing.tsx`: captura real da receita 
 
 `node scripts/update-landing-delivery.mjs` mantém as menções ao acesso pelo web app iguais no HTML e no bundle recuperado, incluindo oferta e FAQ. O script atualiza o nome do bundle por hash e preserva os comportamentos de galeria, modal e compra. Execute antes de `pnpm build:hero` quando houver alterações na copy de entrega.
 
+O mesmo script troca a imagem do livro no componente da oferta por `hero-webapp-screen.webp` dentro da moldura `.bundle-phone-frame`. O slot conserva as dimensões existentes; bônus, preços e demais elementos da oferta permanecem no lugar.
+
 O restante deste documento registra a integração original; a apresentação com capa e páginas em leque da hero foi substituída pelo mockup do aplicativo.
 
 Integração do componente fornecido, mantendo os parâmetros de `fanSlots`, `fanContainer`, `fanCard`, `Reveal` e `ImageFan`. A headline usa a pilha serifada padrão do Tailwind, peso 400 e tamanhos 30/36/48 px. O esquema de cores foi adaptado para a paleta real do site: `#fffaf3`, `#4b2b24`, `#a52f55`, `#75605b`.

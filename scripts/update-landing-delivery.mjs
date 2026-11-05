@@ -29,6 +29,15 @@ for (const [before, after] of replacements) {
   bundle = bundle.replaceAll(before, after)
   html = html.replaceAll(before, after)
 }
+// Replace only the book slot in the complete-plan bundle; bonuses stay intact.
+const oldSlot = '(0,D.jsx)(Je,{small:!0})'
+const phoneImage = '/sobremesas-de-travessa/assets/hero-webapp-screen.webp'
+const phoneAlt = 'Web app no celular: receita de Bombom de uva na travessa'
+const phoneSlot = '(0,D.jsx)(`div`,{className:`bundle-phone`,children:(0,D.jsx)(`div`,{className:`bundle-phone-frame`,children:(0,D.jsx)(`img`,{src:`' + phoneImage + '`,width:375,height:844,alt:`' + phoneAlt + '`,loading:`lazy`,decoding:`async`})})})'
+if (bundle.includes(oldSlot)) bundle = bundle.replaceAll(oldSlot, phoneSlot)
+else if (!bundle.includes(phoneSlot)) throw new Error('Complete-plan image slot not found')
+html = html.replace(/<div class="fan fan-small"[^>]*>[\s\S]*?<\/div>/g,
+  `<div class="bundle-phone"><div class="bundle-phone-frame"><img src="${phoneImage}" width="375" height="844" alt="${phoneAlt}" loading="lazy" decoding="async"/></div></div>`)
 // The active hero preloads its own app screen. Drop the obsolete cover preload.
 html = html.replace(/<link rel="preload" href="\.\/assets\/capa-480.webp"[^>]*\/>/, '')
 const digest = createHash('sha256').update(bundle).digest('hex').slice(0, 12)
