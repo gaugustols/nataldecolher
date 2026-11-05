@@ -112,7 +112,6 @@
       <section class="reading-card"><h2>Sobre a biblioteca</h2><p>Consulte as 30 receitas completas, divididas em clássicos, econômicas e especiais. Todo o conteúdo das receitas pode ser consultado aqui no aplicativo.</p><p>As receitas incluem ingredientes, preparo, montagem ilustrada e cuidados do livro.</p></section>
       <section class="reading-card"><h2>Suas escolhas e marcações</h2><p>Favoritos, cardápio e checklists ficam salvos neste navegador. Não há sincronização entre dispositivos.</p><p>Você pode desmarcar uma etapa ou usar “Limpar marcações” para preparar a receita novamente.</p></section>
       <section class="reading-card"><h2>Materiais complementares</h2><p>Os conteúdos dos três bônus ainda não foram adicionados à biblioteca. Consulte as 30 receitas completas e o Guia de produção pelo menu do aplicativo.</p></section>
-      <section class="reading-card"><h2>Atendimento</h2><p>Para dúvidas sobre sua compra, use o contato informado na página de vendas.</p><a class="support-link" href="mailto:contato@aprendizadoilimitado.online">contato@aprendizadoilimitado.online</a></section>
       <section class="reading-card book-notes"><h2>Notas do livro</h2><p>${esc(P.book.notes)}</p><a class="text-link" href="#/guia">Consultar orientações e referências ${icon('book')}</a></section>
     </div>`;
   }

@@ -57,6 +57,13 @@ if (!html.includes('/assets/offer-devices.css')) {
 }
 // The active hero preloads its own app screen. Drop the obsolete cover preload.
 html = html.replace(/<link rel="preload" href="\.\/assets\/capa-480.webp"[^>]*\/>/, '')
+// Remove the retired support contact from both server markup and React output.
+const supportArticle = ',(0,D.jsxs)(`article`,{children:[(0,D.jsx)(Ee,{size:25,"aria-hidden":`true`}),(0,D.jsxs)(`div`,{children:[(0,D.jsx)(`h3`,{children:`Atendimento sobre a compra`}),(0,D.jsxs)(`p`,{children:[`Fale com a equipe pelo e-mail `,(0,D.jsx)(`a`,{href:`mailto:${k.supportEmail}`,children:k.supportEmail}),`.`]})]})]})'
+const supportFooter = ',(0,D.jsx)(`p`,{children:(0,D.jsx)(`a`,{href:`mailto:${k.supportEmail}`,children:k.supportEmail})})'
+bundle = bundle.replace(supportArticle, '').replace(supportFooter, '').replace(/,supportEmail:`[^`]*`/, '')
+if (bundle.includes('supportEmail')) throw new Error('Retired support contact is still referenced')
+html = html.replace(/<article\b[^>]*>[\s\S]*?<\/article>/g, article => article.includes('Atendimento sobre a compra') ? '' : article)
+html = html.replace(/<p><a href="mailto:[^"]*">[^<]*<\/a><\/p>/g, '')
 const digest = createHash('sha256').update(bundle).digest('hex').slice(0, 12)
 const name = `index-${digest}.js`
 await fs.writeFile(path.join(root, 'assets', name), bundle)

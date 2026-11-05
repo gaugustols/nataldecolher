@@ -4,10 +4,6 @@ const authorImage = '/sobremesas-de-travessa/assets/dalva-fernandes.jpg'
 // compiled bundle intact, including its gallery, checkout and modal behavior.
 export function updateAuthor() {
   const apply = () => {
-    document.querySelectorAll<HTMLAnchorElement>('#root footer a[href="mailto:contato@aprendizadoilimitado.online"]').forEach(link => {
-      const line = link.closest('p')
-      if (line && !line.hidden) line.hidden = true
-    })
     document.querySelectorAll('#root .guarantee-card, #root .offer-trust, #root .faq-list').forEach(block => {
       const texts = document.createTreeWalker(block, NodeFilter.SHOW_TEXT)
       for (let node = texts.nextNode(); node; node = texts.nextNode()) {

@@ -39,4 +39,4 @@ As capturas e o relatório local ficam em `.cache/hero10-preview/`. A publicaç�
 
 `hero/author.ts` aplica a troca solicitada de Ana Maria para Dalva Fernandes no título, apresentação e texto alternativo, com a foto fornecida em `assets/dalva-fernandes.jpg`. A atualização ocorre após a hidratação do aplicativo recuperado e acompanha novas renderizações, sem editar seu bundle compilado. O HTML estático de recuperação permanece original; a identificação atualizada é aplicada pelo JavaScript. A foto foi copiada integralmente, sem alterações na imagem.
 
-O mesmo adaptador atualiza as menções de garantia para 30 dias e oculta o e-mail apenas no rodapé. Os benefícios da hero usam 14 px e preto; a headline usa “30 Receitas”. A CTA da hero está desativada, conforme a revisão final.
+O mesmo adaptador atualiza as menções de garantia para 30 dias. O contato antigo foi removido do HTML e dos bundles pelo script de atualização da landing. Os benefícios da hero usam 14 px e preto; a headline usa “30 Receitas”. A CTA da hero está desativada, conforme a revisão final.

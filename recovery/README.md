@@ -101,6 +101,6 @@ A captura inicial observou tentativas de POST em context/event; foram bloqueadas
 
 `lztrack-original.js` é uma cópia apenas para inspeção, com token diagnóstico temporário removido; não é servido pelo site recuperado. A página continua buscando a versão remota atual do rastreador. No teste local, todos os serviços externos foram bloqueados. Abrir o site normalmente ou republicá-lo pode enviar eventos para o workspace original. Confirmar a conta de destino e os três links de checkout antes do lançamento.
 
-Contato preservado: `contato@aprendizadoilimitado.online`. O rodapé contém o título da oferta e “Edição 2026. Material digital.” Não foi encontrada razão social, endereço, CNPJ ou link explícito de termos/privacidade no HTML da landing page.
+O contato de atendimento foi removido a pedido. O rodapé contém o título da oferta e “Edição 2026. Material digital.” Não foi encontrada razão social, endereço, CNPJ ou link explícito de termos/privacidade no HTML da landing page.
 
 Se nada for alterado, a página exibirá os preços, contato e links antigos, usará o rastreamento original e dependerá dos checkouts externos e da entrega já configurada nessas contas. A recuperação não recria essas contas nem o produto digital completo.
