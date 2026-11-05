@@ -24,6 +24,7 @@ export interface Hero10Props {
   eyebrow?: string
   afterMedia?: React.ReactNode
   mediaBadge?: React.ReactNode
+  media?: React.ReactNode
 }
 
 const variantStyles = {
@@ -182,6 +183,7 @@ export function Hero10({
   eyebrow,
   afterMedia,
   mediaBadge,
+  media,
   animation = 'none',
   primaryCTA,
   secondaryCTA,
@@ -235,7 +237,7 @@ export function Hero10({
     <p className="text-muted-foreground text-xs font-medium">{socialProof}</p>
   )
 
-  const mediaElement = images?.length ? (
+  const mediaElement = media ?? (images?.length ? (
     <ImageFan
       images={images}
       imageAlts={imageAlts}
@@ -243,7 +245,7 @@ export function Hero10({
       cardAspect={vs.fanCard}
       animate={animate}
     />
-  ) : null
+  ) : null)
 
   return (
     <section aria-labelledby="hero10-title" className="h10 bg-background relative isolate w-full overflow-hidden">

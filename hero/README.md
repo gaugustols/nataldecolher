@@ -1,5 +1,13 @@
 # Hero10 — prévia local
 
+## Produto no web app
+
+A hero atual usa `ProductMockup` de `hero/landing.tsx`: captura real da receita de Bombom de uva dentro de uma moldura de celular em CSS, com a travessa recortada ao lado. `hero-webapp-screen.webp` é a captura do app publicado; `hero-bombom-recortado.webp` é o recorte com transparência da foto fornecida, feito com ImageGen. A composição preserva a paleta verde pinheiro, marfim e dourado e a fonte de sistema configurada em `hero-typography.css`.
+
+`node scripts/update-landing-delivery.mjs` mantém as menções ao acesso pelo web app iguais no HTML e no bundle recuperado, incluindo oferta e FAQ. O script atualiza o nome do bundle por hash e preserva os comportamentos de galeria, modal e compra. Execute antes de `pnpm build:hero` quando houver alterações na copy de entrega.
+
+O restante deste documento registra a integração original; a apresentação com capa e páginas em leque da hero foi substituída pelo mockup do aplicativo.
+
 Integração do componente fornecido, mantendo os parâmetros de `fanSlots`, `fanContainer`, `fanCard`, `Reveal` e `ImageFan`. A headline usa a pilha serifada padrão do Tailwind, peso 400 e tamanhos 30/36/48 px. O esquema de cores foi adaptado para a paleta real do site: `#fffaf3`, `#4b2b24`, `#a52f55`, `#75605b`.
 
 O componente está em `components/ui/hero-10.tsx`; CTA e Button ficam na estrutura shadcn. O arquivo auxiliar de CTA não veio na referência: sua implementação usa o Button fornecido, com link e texto existentes. `hero/landing.tsx` fornece a copy e os arquivos reais do produto, incluindo `srcSet`, benefícios, selo e avatares. Foi usado o export nomeado `Balancer` para compatibilidade com a renderização no servidor do pacote instalado.

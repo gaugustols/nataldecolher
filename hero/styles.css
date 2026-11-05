@@ -58,6 +58,34 @@
 #hero10-root .h10-cta:hover { background: #94294c; }
 #hero10-root .h10-cta:focus-visible { outline: 3px solid var(--h10-primary); outline-offset: 5px; }
 #hero10-root .h10-media img { max-width: 100%; display: block; }
+/* Product composition: real app screen, CSS device frame and isolated dessert. */
+#hero10-root .h10-product { position:relative; width:100%; max-width:700px; aspect-ratio:1.32; margin:auto; text-align:left; }
+#hero10-root .h10-product-halo { position:absolute; inset:10% 0 9% 5%; border-radius:50%; background:radial-gradient(ellipse, #dfcfad66, #f4ebd944 55%, #fff8ed00 72%); }
+#hero10-root .h10-phone { position:absolute; z-index:2; left:16%; top:1%; width:31%; padding:7px; border:2px solid #597266; border-radius:32px; background:#173f35; box-shadow:3px 4px 0 #c6a15b, 0 24px 35px #173f3529; transform:rotate(-7deg); }
+#hero10-root .h10-phone::after { content:""; position:absolute; right:-4px; top:19%; width:3px; height:9%; border-radius:3px; background:#173f35; }
+#hero10-root .h10-phone img { width:100%; height:auto; border-radius:23px; }
+#hero10-root .h10-dessert { position:absolute; z-index:3; width:64%; height:auto; right:-1%; bottom:13%; filter:drop-shadow(0 19px 12px #382a2429); }
+#hero10-root .h10-app-label { position:absolute; left:55%; top:6%; display:flex; align-items:center; gap:7px; color:#173f35; font-size:9px; font-weight:700; letter-spacing:1.1px; white-space:nowrap; }
+#hero10-root .h10-app-dot { width:6px; height:6px; background:#c6a15b; border-radius:50%; box-shadow:0 0 0 4px #c6a15b20; }
+#hero10-root .h10-product-count { position:absolute; z-index:4; right:13%; top:16%; display:flex; align-items:center; gap:12px; padding:13px 20px; color:#fff8ed; background:#173f35; border:1px solid #c6a15b; border-radius:14px; box-shadow:0 9px 18px #173f3515; transform:rotate(3deg); }
+#hero10-root .h10-product-count b { font-size:43px; line-height:1; letter-spacing:-2px; }
+#hero10-root .h10-product-count span { font-size:12px; line-height:1.4; }
+#hero10-root .h10-product-step { position:absolute; z-index:4; right:6%; bottom:1%; display:flex; align-items:center; gap:10px; padding:12px 17px; background:#fff8ed; color:#173f35; border:1px solid #dfcfad; border-radius:12px; box-shadow:0 8px 20px #382a240b; font-size:12px; line-height:1.5; }
+#hero10-root .h10-product-step strong { font-weight:600; }
+#hero10-root .h10-product-step svg { width:24px; height:24px; padding:4px; border-radius:50%; color:#fff8ed; background:#173f35; stroke:currentColor; stroke-width:2; flex:none; }
+@media (max-width:600px) {
+  #hero10-root .h10-product { aspect-ratio:1; }
+  #hero10-root .h10-phone { width:40%; left:6%; top:2%; padding:5px; border-radius:23px; box-shadow:2px 3px 0 #c6a15b, 0 17px 25px #173f3526; }
+  #hero10-root .h10-phone img { border-radius:16px; }
+  #hero10-root .h10-dessert { width:69%; right:-3%; bottom:15%; }
+  #hero10-root .h10-app-label { left:auto; right:0; top:3%; gap:5px; font-size:6px; letter-spacing:.65px; }
+  #hero10-root .h10-app-dot { width:4px; height:4px; }
+  #hero10-root .h10-product-count { right:3%; top:18%; gap:7px; padding:9px 11px; border-radius:10px; }
+  #hero10-root .h10-product-count b { font-size:30px; letter-spacing:-1px; }
+  #hero10-root .h10-product-count span { font-size:9px; }
+  #hero10-root .h10-product-step { right:0; bottom:1%; gap:6px; padding:8px 10px; font-size:9px; border-radius:9px; }
+  #hero10-root .h10-product-step svg { width:20px; height:20px; }
+}
 #hero10-root .h10-quantity {
   position: absolute;
   z-index: 30;
