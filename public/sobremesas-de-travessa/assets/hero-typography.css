@@ -1,0 +1,14 @@
+/* Typography from the AnimatedMarqueeHero reference; retain existing sizes. */
+:root #hero10-root h1,
+:root #hero10-root h1 + p {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root #hero10-root h1 {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+:root #hero10-root h1 + p {
+  font-weight: 400;
+}
