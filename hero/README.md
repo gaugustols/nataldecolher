@@ -1,10 +1,10 @@
 # Hero10 — prévia local
 
-## Produto no web app
+## Produto no aplicativo
 
 A hero atual usa `ProductMockup` de `hero/landing.tsx`: captura real da receita de Bombom de uva dentro de uma moldura de celular em CSS, com a travessa recortada ao lado. `hero-webapp-screen.webp` é a captura do app publicado; `hero-bombom-recortado.webp` é o recorte com transparência da foto fornecida, feito com ImageGen. A composição preserva a paleta verde pinheiro, marfim e dourado e a fonte de sistema configurada em `hero-typography.css`.
 
-`node scripts/update-landing-delivery.mjs` mantém as menções ao acesso pelo web app iguais no HTML e no bundle recuperado, incluindo oferta e FAQ. O script atualiza o nome do bundle por hash e preserva os comportamentos de galeria, modal e compra. Execute antes de `pnpm build:hero` quando houver alterações na copy de entrega.
+`node scripts/update-landing-delivery.mjs` mantém as menções ao acesso pelo aplicativo iguais no HTML e no bundle recuperado, incluindo oferta e FAQ. O script atualiza o nome do bundle por hash e preserva os comportamentos de galeria, modal e compra. Execute antes de `pnpm build:hero` quando houver alterações na copy de entrega.
 
 Na oferta do Plano completo, `hero/offer-mockup.mjs` fornece a mesma árvore de apresentação para o HTML e o bundle React: tablet maior com a captura real `offer-tablet-screen.webp` e três celulares com telas de apresentação dos bônus. `offer-devices.css` mantém os celulares lado a lado também no mobile. Preços, lista de benefícios e checkout são preservados; o modal do plano básico mantém a apresentação anterior. As telas dos bônus exibem títulos e descrições de apresentação, sem simular conteúdo ainda não fornecido.
 

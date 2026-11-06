@@ -12,18 +12,22 @@ const script = html.match(/src="\/sobremesas-de-travessa\/assets\/(index-[\w-]+\
 if (!script) throw new Error('Recovered application entry not found')
 const bundlePath = path.join(root, 'assets', script[1])
 let bundle = (await fs.readFile(bundlePath, 'utf8')).replace(/\r\n/g, '\n')
+// Normalize the previous product wording in both render paths.
+const applicationCopy = text => text.replace(/\bweb app\b/gi, value => value === value.toUpperCase() ? 'APLICATIVO' : /^[A-Z]/.test(value) ? 'Aplicativo' : 'aplicativo')
+html = applicationCopy(html)
+bundle = applicationCopy(bundle)
 const replacements = [
-  ['Receba por e-mail e consulte no celular, tablet ou impresso.', 'Receba o acesso por e-mail e consulte as receitas no web app pelo celular.'],
-  ['PDF para consultar no celular ou imprimir', 'Receitas no web app para consultar pelo celular'],
-  ['Baixe os PDFs e consulte quando precisar.', 'Acesse as receitas pelo web app e consulte quando precisar.'],
-  ['O material será enviado por e-mail.', 'Você receberá por e-mail o acesso ao web app.'],
+  ['Receba por e-mail e consulte no celular, tablet ou impresso.', 'Receba o acesso por e-mail e consulte as receitas no aplicativo pelo celular.'],
+  ['PDF para consultar no celular ou imprimir', 'Receitas no aplicativo para consultar pelo celular'],
+  ['Baixe os PDFs e consulte quando precisar.', 'Acesse as receitas pelo aplicativo e consulte quando precisar.'],
+  ['O material será enviado por e-mail.', 'Você receberá por e-mail o acesso ao aplicativo.'],
   ['Quais categorias estão no livro?', 'Quais categorias estão no app?'],
   ['Uma das 30 receitas do livro', 'Uma das 30 receitas do app'],
   ['Veja dois exemplos completos do livro: Bombom de Uva e Cheesecake, dos ingredientes aos cuidados finais.', 'Conheça o conteúdo de duas receitas disponíveis no app: Bombom de Uva e Cheesecake, dos ingredientes aos cuidados finais.'],
   ['Receita completa em cinco páginas', 'Ingredientes, preparo, montagem e cuidados'],
   ['Página real do livro:', 'Prévia do conteúdo:'],
   ['Páginas reais do material', 'Conteúdo das receitas'],
-  ['Acesso vitalício ao kit completo', 'Acesso vitalício ao web app completo'],
+  ['Acesso vitalício ao kit completo', 'Acesso vitalício ao aplicativo completo'],
 ]
 for (const [before, after] of replacements) {
   if (!bundle.includes(before) && !bundle.includes(after)) throw new Error('Missing copy: ' + before)
