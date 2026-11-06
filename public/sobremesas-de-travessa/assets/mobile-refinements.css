@@ -1,4 +1,42 @@
 /* Give the learning steps a readable, consistently aligned column on phones. */
+/* Fit the complete hero on portrait phones, including shorter screens. */
+@media (width <= 600px) and (orientation: portrait) {
+  :root #hero10-root .h10 > div {
+    padding: 18px 20px;
+    gap: 12px;
+  }
+
+  :root #hero10-root .h10 > div > div:first-child { gap: 10px; }
+  :root #hero10-root .h10-eyebrow { padding: 6px 12px; font-size: 10px; }
+  :root #hero10-root h1 { font-size: clamp(24px, 7vw, 28px); line-height: 1.12; }
+  :root #hero10-root h1 + p { font-size: 14px; line-height: 1.4; }
+
+  :root #hero10-root .h10-media {
+    max-width: min(100%, clamp(144px, calc(100svh - 430px), 340px));
+  }
+
+  /* Scale the labels with the artwork so they never cover it on short phones. */
+  :root #hero10-root .h10-product { container-type: inline-size; }
+  :root #hero10-root .h10-phone { padding: 1.47cqw; border-radius: 6.76cqw; }
+  :root #hero10-root .h10-phone img { border-radius: 4.7cqw; }
+  :root #hero10-root .h10-app-label { gap: 1.47cqw; font-size: 1.76cqw; letter-spacing: .19cqw; }
+  :root #hero10-root .h10-app-dot { width: 1.17cqw; height: 1.17cqw; }
+  :root #hero10-root .h10-product-count { gap: 2cqw; padding: 2.65cqw 3.2cqw; border-radius: 2.94cqw; }
+  :root #hero10-root .h10-product-count b { font-size: 8.8cqw; letter-spacing: -.29cqw; }
+  :root #hero10-root .h10-product-count span { font-size: 2.65cqw; }
+  :root #hero10-root .h10-product-step { gap: 1.76cqw; padding: 2.35cqw 2.94cqw; font-size: 2.65cqw; border-radius: 2.65cqw; }
+  :root #hero10-root .h10-product-step svg { width: 5.9cqw; height: 5.9cqw; padding: 1.17cqw; }
+
+  :root #hero10-root .h10-commercial { margin-top: 0; }
+  :root #hero10-root .h10-benefits { gap: 7px; font-size: 13px; line-height: 1.35; }
+  :root #hero10-root .h10-benefits li { gap: 8px; }
+  :root #hero10-root .h10-benefits svg { flex-basis: 18px; width: 18px; height: 18px; }
+  :root #hero10-root .h10-people { flex-wrap: nowrap; gap: 8px; margin-top: 12px; }
+  :root #hero10-root .h10-people p { font-size: 12px; line-height: 1.3; }
+  :root #hero10-root .h10-avatars { gap: 3px; }
+  :root #hero10-root .h10-avatars > span { width: 24px; height: 24px; }
+}
+
 @media (width <= 600px) {
   :root #root .timeline {
     --mobile-step-gap: 26px;
