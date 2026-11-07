@@ -1,6 +1,6 @@
 # Sobremesas de Travessa para o Natal — aplicativo offline
 
-Abra `index.html` diretamente no navegador. As 30 receitas, imagens, favoritos, cardápio e checklists funcionam sem internet e sem build. Mantenha os arquivos `index.html`, `style.css`, `natal-elegante.css`, `data.js`, `app.js` e a pasta `assets/` juntos.
+Abra `index.html` diretamente no navegador. As 30 receitas, imagens, favoritos, cardápio e checklists funcionam sem internet e sem build. Mantenha os arquivos `index.html`, `style.css`, `natal-elegante.css`, `data.js`, `bonus-data.js`, `app.js` e a pasta `assets/` juntos.
 
 ## O que já funciona
 
@@ -10,7 +10,7 @@ Abra `index.html` diretamente no navegador. As 30 receitas, imagens, favoritos, 
 - Ingredientes por preparo, checklist de etapas, progresso pessoal e montagem original ampliável.
 - Favoritos, cardápio e última receita aberta, com armazenamento local quando permitido pelo navegador. Com armazenamento bloqueado, o app mantém o funcionamento durante a sessão.
 - Guia de produção com organização, ingredientes, resfriamento, escala, entrega e referências, para consulta dentro do app.
-- Três páginas de bônus e ajuda; conteúdos dos bônus ainda pendentes.
+- Três bônus completos para leitura no aplicativo: Guia de Preços, Kit de WhatsApp e Guia de aproveitamento; 73 assuntos, tabelas, notas e referências preservados.
 - Consulta integral das receitas no aplicativo, sem PDF publicado ou links de download. A antiga rota de downloads redireciona para o guia.
 - Navegação SPA por hash, barra inferior móvel, menu lateral no desktop e retorno à lista com filtro e posição preservados.
 
@@ -18,9 +18,8 @@ O aplicativo não exige login nem valida compras nesta versão. Não há backend
 
 ## Exatamente o que falta trocar antes da entrega aos compradores
 
-1. **Bônus:** completar os conteúdos reais dos três bônus para consulta dentro do app. `messages: null` marca o kit de WhatsApp ainda não recebido. O recurso “Copiar mensagem” aparece somente quando houver mensagens reais em `{title, text}`.
-2. **Básico:** definir quais cinco receitas pertencem ao plano, seu prazo de acesso e a aplicação da garantia. Não inventar esses dados.
-3. **Acesso:** autenticação, confirmação de compra e permissões por plano exigem uma integração própria. Esta versão estática não simula contas nem pagamentos.
+1. **Básico:** definir quais cinco receitas pertencem ao plano, seu prazo de acesso e a aplicação da garantia. Não inventar esses dados.
+2. **Acesso:** autenticação, confirmação de compra e permissões por plano exigem uma integração própria. Esta versão estática não simula contas nem pagamentos.
 
 ## Importação e conferência do livro
 
@@ -47,3 +46,9 @@ A validação exige 30 fichas completas, 252 itens de ingredientes, 120 etapas, 
 - `assets/`: imagens existentes e fotos/montagens extraídas do livro fornecido.
 
 Para hospedar como estático, enviar esta pasta inteira. No repositório atual, a rota de hospedagem é `/planopro/`, independente da landing em `/sobremesas-de-travessa/`.
+
+## Atualização dos bônus
+
+Os bônus estão importados de `Conteúdos/` para `bonus-data.js`, sem publicar os PDFs. O Kit de WhatsApp oferece 24 modelos comentados, oito textos para Status e um resumo de pedido para copiar. As fichas têm espaço para anotações salvas neste navegador.
+
+Com o Python que contém `pdfplumber`, execute `python scripts/import-planopro-bonuses.py`. Para conferir a fidelidade com os três PDFs privados, use `python scripts/import-planopro-bonuses.py --verify`. A importação preserva textos, tabelas, notas e referências; verifica a cobertura de todos os caracteres do conteúdo de cada página. As capas são usadas apenas como identificação dos materiais. O arquivo `bonus-data.js` deve permanecer junto de `data.js` e `app.js`; ele é independente da importação das receitas. Os arquivos PDF não devem ser copiados para `public/`.

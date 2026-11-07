@@ -1,6 +1,7 @@
 (() => {
   'use strict';
   const P = window.PRODUCT;
+  const bonusContent = window.BONUS_CONTENT || {};
   const $ = s => document.querySelector(s);
   const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const paths = {
@@ -30,6 +31,7 @@
   let favorites = new Set(read('favorites', []).filter(id=>ids.has(id)));
   let menu = new Set(read('menu', []).filter(id=>ids.has(id)));
   let checks = read('checks', {}), query = '', currentFilter = 'todas';
+  const bonusNotes = read('bonus-notes', {});
   let last = read('last', null), previousList = '#/receitas', toastTimer;
   const category = id => P.categories.find(c=>c.id===id);
   function toast(text) { $('#toast').textContent=text; $('#toast').classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),2600); }
@@ -92,9 +94,22 @@
   }
   function bonusCards() { return `<div class="bonus-grid">${P.bonuses.map((b,i)=>`<a href="#/bonus/${b.id}" class="bonus-card"><div class="bonus-art"><img src="assets/${b.photo}" alt="Capa: ${esc(b.name)}" loading="lazy"></div><div><span class="tiny-label">BÔNUS ${i+1} · PLANO COMPLETO</span><h3>${b.name}</h3><p>${b.description}</p><span class="recipe-link">Conhecer o material ${icon('arrow')}</span></div></a>`).join('')}</div>`; }
   function bonusPage(id) {
-    if(!id)return `${heading('PARA SUAS ENCOMENDAS','Seus bônus','Três bônus incluídos no plano completo.')}${bonusCards()}${missing('Conteúdos dos bônus','Os conteúdos completos dos bônus ainda não foram adicionados à biblioteca.')}`;
+    if(!id)return `${heading('PARA SUAS ENCOMENDAS','Seus bônus','Três bônus para ler e consultar aqui no aplicativo.')}${bonusCards()}<p class="library-note">Guias, fichas e mensagens organizados por assunto. Abra um bônus para acessar seu conteúdo completo.</p>`;
     const b=P.bonuses.find(x=>x.id===id);if(!b)return notFound();
-    return `${heading('NO PLANO COMPLETO',b.name,b.description,'#/bonus')}<div class="bonus-detail"><div class="bonus-detail-art"><img src="assets/${b.photo}" alt="Capa: ${esc(b.name)}"></div><div class="reading-card"><span class="section-icon">${icon(b.icon)}</span><h2>${b.detail}</h2>${missing('Conteúdo do bônus','O conteúdo completo deste bônus ainda não foi adicionado à biblioteca.')}${b.messages?`<div>${b.messages.map((m,i)=>`<article class="message-card"><h3>${esc(m.title)}</h3><p>${esc(m.text)}</p><button class="button outline" data-copy="${i}">Copiar mensagem</button></article>`).join('')}</div>`:''}</div></div>`;
+    const content=bonusContent[id];if(!content)return `${heading('NO PLANO COMPLETO',b.name,b.description,'#/bonus')}${missing('Conteúdo indisponível','Recarregue a página para abrir este bônus.')}`;
+    const chapters=content.sections;
+    return `${heading('NO PLANO COMPLETO',content.title,b.description,'#/bonus')}
+      <div class="bonus-reader-intro"><img src="assets/${b.photo}" alt="Capa: ${esc(content.title)}" width="120" height="170"><div><span class="section-icon">${icon(b.icon)}</span><h2>${esc(b.detail)}</h2><p>${chapters.length} assuntos · Leitura completa no aplicativo</p>${id==='whatsapp'?'<p>24 modelos comentados, 8 textos para Status e um resumo de pedido para copiar. Substitua os campos entre colchetes antes de enviar.</p>':'<p>Consulte os exemplos, as tabelas e as fichas. Use as anotações para registrar seus próprios dados.</p>'}</div></div>
+      <div class="bonus-reader"><aside class="bonus-index reading-card" aria-label="Índice do bônus"><label for="bonus-chapter">Ir para um assunto</label><select id="bonus-chapter"><option value="">Escolha um assunto</option>${chapters.map((s,i)=>`<option value="${s.id}">${String(i+1).padStart(2,'0')} · ${esc(s.title)}</option>`).join('')}</select><nav>${chapters.map((s,i)=>`<a href="#${s.id}" data-scroll="${s.id}"><span>${String(i+1).padStart(2,'0')}</span>${esc(s.title)}</a>`).join('')}</nav></aside>
+      <div class="bonus-chapters">${chapters.map((s,i)=>`<article class="reading-card bonus-chapter" id="${s.id}"><p class="eyebrow">${String(i+1).padStart(2,'0')} · ${esc(content.title)}</p><h2>${esc(s.title)}</h2>${s.blocks.map((block,j)=>bonusBlock(block,`${s.id}-${j}`)).join('')}${s.blocks.some(block=>block.type==='table'&&block.rows.some(row=>row.some(cell=>/_{3,}/.test(cell))))||/ficha|controle|etiqueta|própria mensagem|próxima produção/i.test(s.title)?`<details class="bonus-notes"><summary>Preencher minhas anotações</summary><label for="notes-${s.id}">Seus dados para esta ficha</label><textarea id="notes-${s.id}" data-bonus-note="${s.id}" rows="6" placeholder="Registre os dados e as contas desta ficha.">${esc(bonusNotes[s.id]||'')}</textarea><small>As anotações ficam neste navegador. Não são enviadas para outras pessoas nem sincronizadas entre aparelhos.</small></details>`:''}<button class="text-button bonus-top" data-scroll="bonus-chapter">Voltar ao índice ↑</button></article>`).join('')}</div></div>`;
+  }
+  function bonusBlock(block,key) {
+    if(block.type==='table')return `<div class="bonus-table-wrap" role="region" aria-label="Tabela de consulta" tabindex="0"><table class="bonus-table"><thead><tr>${block.rows[0].map(cell=>`<th scope="col">${esc(cell)}</th>`).join('')}</tr></thead><tbody>${block.rows.slice(1).map(row=>`<tr>${row.map((cell,i)=>`<${i?'td':'th scope="row"'}>${esc(cell)}</${i?'td':'th'}>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+    if(block.type==='flow')return `<ol class="bonus-flow">${block.items.map(item=>`<li>${esc(item)}</li>`).join('')}</ol>`;
+    if(block.type==='copy')return `<div class="bonus-message"><p class="tiny-label">${esc(block.label||'TEXTO PARA COPIAR')}</p><p class="bonus-message-text" id="message-${key}">${esc(block.text)}</p><button class="button outline" data-bonus-copy="message-${key}">${icon('message')}Copiar texto</button></div>`;
+    if(block.type==='note'){const lines=block.text.split('\n');return `<aside class="bonus-callout">${block.label?`<strong>${esc(block.label)}</strong>`:''}<strong>${esc(lines.shift())}</strong><p>${esc(lines.join(' '))}</p></aside>`;}
+    if(block.type==='heading'){const match=block.text.match(/^(.*?) ([1-5])$/);return match?`<h3 class="bonus-step"><span>${match[2]}</span>${esc(match[1])}</h3>`:`<h3>${esc(block.text)}</h3>`;}
+    return `<p>${esc(block.text)}</p>`;
   }
   function guide() {
     const sections = P.guide.map(section => {
@@ -111,7 +126,7 @@
     return `${heading('PODE CONSULTAR','Ajuda e acesso','Consulte informações sobre seus materiais e o atendimento.')}<div class="help-grid">
       <section class="reading-card"><h2>Sobre a biblioteca</h2><p>Consulte as 30 receitas completas, divididas em clássicos, econômicas e especiais. Todo o conteúdo das receitas pode ser consultado aqui no aplicativo.</p><p>As receitas incluem ingredientes, preparo, montagem ilustrada e cuidados do livro.</p></section>
       <section class="reading-card"><h2>Suas escolhas e marcações</h2><p>Favoritos, cardápio e checklists ficam salvos neste navegador. Não há sincronização entre dispositivos.</p><p>Você pode desmarcar uma etapa ou usar “Limpar marcações” para preparar a receita novamente.</p></section>
-      <section class="reading-card"><h2>Materiais complementares</h2><p>Os conteúdos dos três bônus ainda não foram adicionados à biblioteca. Consulte as 30 receitas completas e o Guia de produção pelo menu do aplicativo.</p></section>
+      <section class="reading-card"><h2>Materiais complementares</h2><p>Leia o Guia de Preços de Natal 2026, o Kit de WhatsApp e o Guia de aproveitamento na área de bônus. Os conteúdos completos estão organizados para consulta dentro do aplicativo.</p><a class="text-link" href="#/bonus">Consultar os três bônus ${icon('gift')}</a></section>
       <section class="reading-card book-notes"><h2>Notas do livro</h2><p>${esc(P.book.notes)}</p><a class="text-link" href="#/guia">Consultar orientações e referências ${icon('book')}</a></section>
     </div>`;
   }
@@ -133,7 +148,8 @@
     if(returnToList)requestAnimationFrame(()=>window.scrollTo({top:listScroll,behavior:'instant'}));
   }
   document.addEventListener('click',e=>{
-    const button=e.target.closest('[data-favorite],[data-menu],[data-filter],[data-reset],[data-scroll],[data-image],[data-copy]');if(!button)return;
+    const button=e.target.closest('[data-favorite],[data-menu],[data-filter],[data-reset],[data-scroll],[data-image],[data-copy],[data-bonus-copy]');if(!button)return;
+    if(button.hasAttribute('data-bonus-copy')){const message=document.getElementById(button.dataset.bonusCopy);if(!message)return;const fallback=()=>{const range=document.createRange();range.selectNodeContents(message);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);toast('Texto selecionado. Use a opção Copiar do seu navegador.');};if(navigator.clipboard?.writeText)navigator.clipboard.writeText(message.textContent).then(()=>toast('Texto copiado. Substitua os campos entre colchetes antes de enviar.')).catch(fallback);else fallback();return;}
     if(button.hasAttribute('data-favorite')){
       const id=button.dataset.favorite;if(!ids.has(id))return;
       favorites.has(id)?favorites.delete(id):favorites.add(id);save('favorites',[...favorites]);
@@ -147,8 +163,9 @@
     } else if(button.hasAttribute('data-image')){const image=$('#image-dialog img');image.src='assets/'+button.dataset.image;image.alt=button.dataset.alt;$('#image-dialog').showModal();
     } else if(button.hasAttribute('data-copy')){const b=P.bonuses.find(b=>'#/bonus/'+b.id===location.hash),m=b?.messages?.[Number(button.dataset.copy)];if(m){if(navigator.clipboard?.writeText)navigator.clipboard.writeText(m.text).then(()=>toast('Mensagem copiada.')).catch(()=>toast('Selecione o texto da mensagem para copiar.'));else toast('Selecione o texto da mensagem para copiar.');}}
   });
-  document.addEventListener('input',e=>{if(e.target.id==='recipe-search'){query=e.target.value;renderResults();}});
+  document.addEventListener('input',e=>{if(e.target.id==='recipe-search'){query=e.target.value;renderResults();}if(e.target.hasAttribute('data-bonus-note')){bonusNotes[e.target.dataset.bonusNote]=e.target.value;save('bonus-notes',bonusNotes);}});
   document.addEventListener('change',e=>{
+    if(e.target.id==='bonus-chapter'){document.getElementById(e.target.value)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});return;}
     const key=e.target.dataset.check;if(!key)return;checks[key]=e.target.checked;save('checks',checks);e.target.closest('.check-row').classList.toggle('done',e.target.checked);
     const id=location.hash.split('/')[2],s=P.details[id];if(s){const done=s.steps.filter((_,i)=>checks[id+'-step-'+i]).length;$('#recipe-progress').value=done;$('#progress-label').textContent=`${done} de ${s.steps.length} etapas marcadas`;}
   });
