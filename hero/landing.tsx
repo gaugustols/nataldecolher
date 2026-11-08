@@ -32,13 +32,15 @@ function CommercialDetails() {
 export function HeroLanding() {
   return <Hero10
     eyebrow="RENDA EXTRA NO NATAL"
-    title="30 Receitas de sobremesas de travessa"
-    titleHighlight="para vender neste Natal"
-    description="Aproveite para lotar sua agenda de encomendas e lucrar nesse fim de ano com um produto de alta demanda."
+    title="DINHEIRO RÁPIDO NO NATAL:"
+    highlightTitle
+    titleHighlight=""
+    titleSuffix=" Transforme sua cozinha em uma máquina de lucro com 30 sobremesas de travessa que vendem sozinhas!"
+    description="O segredo para faturar uma renda extra pesada sem sair de casa: aprenda a preparar doces irrecusáveis, calcular o preço ideal e lotar seu WhatsApp de pedidos antes que o Natal chegue."
     images={[]}
     media={<ProductMockup />}
     animation="subtle"
-    primaryCTA={{ ctaEnabled: false, text: 'QUERO AS RECEITAS', link: '#oferta', variant: 'default', size: 'default' }}
+    primaryCTA={{ ctaEnabled: true, text: 'QUERO COMEÇAR', link: '#oferta', variant: 'default', size: 'default' }}
     afterMedia={<CommercialDetails />}
   />
 }

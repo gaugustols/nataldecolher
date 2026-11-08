@@ -1,0 +1,24 @@
+/* Three steps between the material preview and the dessert gallery. */
+#root .how-it-works { background:var(--paper); padding-block:44px; }
+#root .how-it-works .section-heading { margin-bottom:26px; }
+#root .how-it-works-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; list-style:none; padding:0; margin:0; }
+#root .how-it-works-steps>li { min-width:0; padding:24px; background:var(--cream); border:1px solid var(--line); border-radius:16px; }
+#root .how-it-works-number { display:flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; background:var(--action); color:var(--paper); font-size:18px; font-weight:700; margin-bottom:18px; }
+#root .how-it-works-steps h3 { margin:0 0 12px; font-size:21px; line-height:1.25; color:var(--ink); letter-spacing:-.025em; }
+#root .how-it-works-steps p { margin:0; color:var(--muted); font-size:15px; line-height:1.65; }
+#root .how-it-works-action { width:100%; max-width:430px; margin:26px auto 0; text-align:center; }
+#root .how-it-works-action .btn { background:var(--action); border:1px solid var(--gold); border-radius:13px; box-shadow:0 5px #102e26,0 10px 23px #173f3526; animation:cta-pulse 2.2s ease-in-out infinite; }
+#root .how-it-works-action .btn:hover, #root .how-it-works-action .btn:focus-visible { animation-play-state:paused; }
+#root .how-it-works-action .btn svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; flex-shrink:0; }
+@media(prefers-reduced-motion:reduce) {
+  #root .how-it-works-action .btn { animation:none; transform:none; }
+}
+@media(max-width:700px) {
+  #root .how-it-works { padding-block:32px; }
+  #root .how-it-works .section-heading { margin-bottom:22px; }
+  #root .how-it-works-steps { grid-template-columns:1fr; gap:12px; }
+  #root .how-it-works-steps>li { display:flex; gap:14px; padding:19px 17px; align-items:flex-start; }
+  #root .how-it-works-number { width:32px; height:32px; margin:0; flex:0 0 32px; font-size:16px; }
+  #root .how-it-works-steps h3 { font-size:18px; margin-bottom:8px; }
+  #root .how-it-works-steps p { font-size:14px; line-height:1.6; }
+}

@@ -12,6 +12,8 @@ export interface Hero10Props {
   title: string
   titleLine2Prefix?: string
   titleHighlight?: string
+  titleSuffix?: string
+  highlightTitle?: boolean
   description: string
   socialProof?: string
   images: string[]
@@ -175,6 +177,8 @@ export function Hero10({
   title,
   titleLine2Prefix,
   titleHighlight,
+  titleSuffix,
+  highlightTitle = false,
   description,
   socialProof,
   images,
@@ -201,8 +205,8 @@ export function Hero10({
         vs.title,
       )}
     >
-      <Balancer>{title}</Balancer>
-      {(titleLine2Prefix || titleHighlight) && (
+      {titleSuffix ? <Balancer>{highlightTitle ? <span className="text-primary">{title}</span> : title}{titleHighlight && <> <span className="text-primary">{titleHighlight}</span></>}{titleSuffix}</Balancer> : <Balancer>{title}</Balancer>}
+      {!titleSuffix && (titleLine2Prefix || titleHighlight) && (
         <>
           <br />
           <Balancer>
@@ -223,7 +227,7 @@ export function Hero10({
   )
 
   const ctasElement = (primaryCTA?.ctaEnabled || secondaryCTA?.ctaEnabled) && (
-    <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
+    <div className="h10-cta-row flex flex-wrap items-center justify-center gap-x-4 gap-y-3">
       {primaryCTA?.ctaEnabled && <Cta cta={primaryCTA} />}
       {secondaryCTA?.ctaEnabled && (
         <Cta
@@ -274,7 +278,7 @@ export function Hero10({
 
         <div className={cn('h10-media relative mx-auto w-full', vs.fan)}>{mediaElement}{mediaBadge}</div>
 
-        {(ctasElement || socialProofElement) && <Reveal active={animate} className="flex flex-col items-center gap-4">
+        {(ctasElement || socialProofElement) && <Reveal active={animate} className="h10-actions flex flex-col items-center gap-4">
           {ctasElement}
           {socialProofElement}
         </Reveal>}

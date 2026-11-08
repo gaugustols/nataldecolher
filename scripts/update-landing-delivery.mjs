@@ -23,7 +23,7 @@ const replacements = [
   ['O material será enviado por e-mail.', 'Você receberá por e-mail o acesso ao aplicativo.'],
   ['Quais categorias estão no livro?', 'Quais categorias estão no app?'],
   ['Uma das 30 receitas do livro', 'Uma das 30 receitas do app'],
-  ['Veja dois exemplos completos do livro: Bombom de Uva e Cheesecake, dos ingredientes aos cuidados finais.', 'Conheça o conteúdo de duas receitas disponíveis no app: Bombom de Uva e Cheesecake, dos ingredientes aos cuidados finais.'],
+  ['Veja dois exemplos completos do livro: Bombom de Uva e Cheesecake, dos ingredientes aos cuidados finais.', 'Veja como as receitas estão organizadas para ajudar você a preparar suas sobremesas, escolher o que vender e começar a montar seu cardápio de Natal.'],
   ['Receita completa em cinco páginas', 'Ingredientes, preparo, montagem e cuidados'],
   ['Página real do livro:', 'Prévia do conteúdo:'],
   ['Páginas reais do material', 'Conteúdo das receitas'],

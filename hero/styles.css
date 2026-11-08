@@ -54,9 +54,14 @@
   font-weight: 700;
   letter-spacing: 1.1px;
 }
-#hero10-root .h10-cta { border-radius: 9999px; padding-inline: 24px; text-decoration: none; font-size: 14px; color: var(--h10-background); background: var(--h10-primary); }
-#hero10-root .h10-cta:hover { background: #94294c; }
+#hero10-root .h10-actions { width:100%; max-width:430px; }
+#hero10-root .h10-cta-row { width:100%; }
+#hero10-root .h10-cta { display:flex; width:100%; height:auto; min-height:52px; justify-content:center; align-items:center; gap:10px; padding:14px 20px; border:1px solid var(--elegant-gold,#c6a15b); border-radius:13px; text-decoration:none; font-size:15px; font-weight:700; line-height:1.3; color:var(--h10-background); background:var(--h10-primary); box-shadow:0 5px #102e26,0 10px 23px #173f3526; transform-origin:center; animation:cta-pulse 2.2s ease-in-out infinite; transition:background .18s,transform .18s; }
+#hero10-root .h10-cta svg { flex:none; }
+#hero10-root .h10-cta:hover { background:#235748; }
+#hero10-root .h10-cta:hover, #hero10-root .h10-cta:focus-visible { animation-play-state:paused; }
 #hero10-root .h10-cta:focus-visible { outline: 3px solid var(--h10-primary); outline-offset: 5px; }
+@media(max-width:600px) { #hero10-root .h10-cta { min-height:46px; padding:12px 8px; font-size:14px; } }
 #hero10-root .h10-media img { max-width: 100%; display: block; }
 /* Product composition: real app screen, CSS device frame and isolated dessert. */
 #hero10-root .h10-product { position:relative; width:100%; max-width:700px; aspect-ratio:1.32; margin:auto; text-align:left; }
@@ -132,5 +137,6 @@
   #hero10-root .h10-avatars > span { width: 28px; height: 28px; padding: 1px; }
 }
 @media (prefers-reduced-motion: reduce) {
+  #hero10-root .h10-cta { animation:none; transform:none; }
   #hero10-root [style*="opacity"] { opacity: 1 !important; filter: none !important; }
 }
